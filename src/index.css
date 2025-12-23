@@ -1,0 +1,304 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Koyeb-Inspired Design System with Brown Theme
+   All colors in HSL format for consistency.
+   Typography: Anton (headings), JetBrains Mono (nav/tech), Inter (body)
+*/
+
+@layer base {
+  :root {
+    /* Main Background - Deep Coffee Brown with grainy texture look */
+    --background: 20 35% 12%;  /* #2D1B0D - Deep coffee brown */
+    --foreground: 40 30% 90%;  /* #F5EDE0 - Warm cream/beige */
+
+    /* Card - Slightly lighter brown with subtle transparency feel */
+    --card: 20 30% 15%;        /* #3A2515 - Lighter coffee */
+    --card-foreground: 40 30% 90%;
+
+    /* Popover - Same as card */
+    --popover: 20 30% 15%;
+    --popover-foreground: 40 30% 90%;
+
+    /* Primary - Warm Gold/Amber for CTAs (replacing Koyeb green) */
+    --primary: 38 70% 50%;     /* #D4A020 - Rich gold */
+    --primary-foreground: 20 35% 10%;
+
+    /* Secondary - Burnt Sienna/Terracotta */
+    --secondary: 15 50% 45%;   /* #AA5A38 - Terracotta */
+    --secondary-foreground: 40 30% 90%;
+
+    /* Accent - Bright Amber glow */
+    --accent: 35 85% 55%;      /* #E8A832 - Bright amber */
+    --accent-foreground: 20 35% 10%;
+
+    /* Muted - Dark brown tones */
+    --muted: 20 25% 20%;       /* #423024 - Muted brown */
+    --muted-foreground: 30 15% 55%; /* #8F7F6E - Warm grey-brown */
+
+    /* Destructive */
+    --destructive: 0 60% 50%;
+    --destructive-foreground: 40 30% 90%;
+
+    /* Success - Olive/Forest green that complements brown */
+    --success: 90 35% 45%;
+    --success-foreground: 40 30% 90%;
+
+    /* Border & Input */
+    --border: 25 20% 25%;      /* #4A3828 - Brown border */
+    --input: 25 20% 25%;
+    --ring: 38 70% 50%;
+
+    --radius: 0.375rem;        /* 6px - Koyeb uses subtle rounding */
+
+    /* Shadows with warm brown tint */
+    --shadow-soft: 0 10px 40px rgba(45, 27, 13, 0.4);
+    --shadow-card: 0 4px 20px rgba(45, 27, 13, 0.3);
+    --shadow-3d: inset 0 -4px 0 0 rgba(0, 0, 0, 0.3);
+    
+    /* Transitions */
+    --transition-smooth: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Koyeb-style grainy/noisy texture overlay on the entire page */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0.08;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  }
+}
+
+@layer utilities {
+  /* Text gradient utility - gold/amber theme */
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent;
+  }
+  
+  /* Koyeb-style glassmorphism card */
+  .card-glass {
+    @apply bg-card/80 backdrop-blur-sm;
+  }
+  
+  .bg-gradient-radial {
+    background-image: radial-gradient(circle, var(--tw-gradient-stops));
+  }
+
+  /* Koyeb 3D shadow button effect */
+  .btn-3d {
+    box-shadow: inset 0 -4px 0 0 rgba(0, 0, 0, 0.3);
+    transition: all 150ms ease;
+  }
+  
+  .btn-3d:hover {
+    transform: translateY(2px);
+    box-shadow: inset 0 -2px 0 0 rgba(0, 0, 0, 0.3);
+  }
+  
+  .btn-3d:active {
+    transform: translateY(4px);
+    box-shadow: inset 0 0px 0 0 rgba(0, 0, 0, 0.3);
+  }
+
+  /* Koyeb-style nav pill container */
+  .nav-pill-container {
+    @apply backdrop-blur-md rounded-lg px-2 py-2;
+    background: rgba(74, 56, 40, 0.85);
+    border: 1px solid rgba(212, 160, 32, 0.15);
+  }
+
+  /* Koyeb uppercase monospace labels */
+  .label-mono {
+    @apply font-mono text-xs uppercase tracking-wider;
+  }
+
+  /* Koyeb thin grid lines */
+  .grid-lines {
+    background-image: 
+      linear-gradient(to right, rgba(212, 160, 32, 0.06) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(212, 160, 32, 0.06) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+}
+
+/* Koyeb Premium Animations */
+@media (prefers-reduced-motion: no-preference) {
+  /* Subtle background drift animation */
+  @keyframes lattice-drift {
+    0%, 100% { transform: translate3d(0, 0, 0); }
+    25% { transform: translate3d(8px, -6px, 0); }
+    50% { transform: translate3d(-4px, 10px, 0); }
+    75% { transform: translate3d(-8px, -4px, 0); }
+  }
+  
+  .lattice-drift {
+    animation: lattice-drift 90s cubic-bezier(0.2, 0.8, 0.2, 1) infinite;
+  }
+
+  /* Diagonal scan sweep - warm amber glow */
+  @keyframes scan-sweep {
+    0%, 100% { opacity: 0; transform: translateX(-120%) translateY(-120%); }
+    5% { opacity: 1; }
+    45% { opacity: 1; }
+    50%, 100% { opacity: 0; transform: translateX(120%) translateY(120%); }
+  }
+  
+  .scan-sweep {
+    animation: scan-sweep 16s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  }
+
+  /* Headline reveal animation */
+  @keyframes line-reveal {
+    from { 
+      opacity: 0;
+      transform: translateY(12px);
+      letter-spacing: 0.02em;
+    }
+    to { 
+      opacity: 1;
+      transform: translateY(0);
+      letter-spacing: 0;
+    }
+  }
+  
+  .line-reveal-1 {
+    animation: line-reveal 600ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    animation-delay: 100ms;
+    opacity: 0;
+  }
+  
+  .line-reveal-2 {
+    animation: line-reveal 600ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    animation-delay: 180ms;
+    opacity: 0;
+  }
+
+  /* CTA spark hover effect */
+  @keyframes spark-trail {
+    0% {
+      background-position: -200% 0%;
+      opacity: 0;
+    }
+    20% {
+      opacity: 1;
+    }
+    100% {
+      background-position: 200% 200%;
+      opacity: 0;
+    }
+  }
+  
+  .btn-spark {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .btn-spark::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      135deg,
+      transparent 40%,
+      rgba(212, 160, 32, 0.4) 48%,
+      rgba(232, 168, 50, 0.7) 50%,
+      rgba(212, 160, 32, 0.4) 52%,
+      transparent 60%
+    );
+    background-size: 200% 200%;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 100ms ease;
+  }
+  
+  .btn-spark:hover::before {
+    animation: spark-trail 400ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* Subtle glow pulse for accents */
+  @keyframes glow-pulse {
+    0%, 100% { 
+      box-shadow: 0 0 20px rgba(212, 160, 32, 0.2);
+    }
+    50% { 
+      box-shadow: 0 0 40px rgba(212, 160, 32, 0.4);
+    }
+  }
+
+  .glow-pulse {
+    animation: glow-pulse 3s ease-in-out infinite;
+  }
+
+  /* Fade in animation */
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-in {
+    animation: fade-in 0.6s ease-out forwards;
+  }
+}
+
+/* Fallback for reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .line-reveal-1,
+  .line-reveal-2,
+  .animate-fade-in {
+    opacity: 1;
+    animation: none;
+  }
+}
+
+/* Koyeb-style section dividers - thin horizontal lines */
+.section-divider {
+  @apply border-t border-border/50;
+}
+
+/* Koyeb-style card with minimal border */
+.koyeb-card {
+  @apply rounded-md border border-border/60 bg-card/60 backdrop-blur-sm;
+  transition: all 200ms ease;
+}
+
+.koyeb-card:hover {
+  @apply border-primary/30;
+  box-shadow: 0 4px 24px rgba(212, 160, 32, 0.1);
+}
+
+/* Koyeb news banner / tag style */
+.news-banner {
+  @apply inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-mono uppercase tracking-wide;
+  background: linear-gradient(135deg, rgba(170, 90, 56, 0.3) 0%, rgba(232, 168, 50, 0.2) 100%);
+  border: 1px solid rgba(212, 160, 32, 0.3);
+}
+
+/* Footer high-contrast section */
+.footer-contrast {
+  @apply bg-primary text-primary-foreground;
+}
