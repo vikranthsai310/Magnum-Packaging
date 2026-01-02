@@ -9,8 +9,12 @@ export const Footer = () => {
           <div className="grid md:grid-cols-3 gap-12 mb-12">
             {/* Brand & Address */}
             <div className="space-y-6">
-              <div className="flex items-center gap-2">
-                <Package className="w-6 h-6 text-primary" />
+              <div className="flex items-center gap-3">
+                <img
+                  src="/Logo.jpeg"
+                  alt="Magnum Packaging Logo"
+                  className="w-8 h-8 object-contain"
+                />
                 <span className="font-mono text-lg font-bold tracking-tight text-foreground">MAGNUM PACKAGING</span>
               </div>
 
@@ -21,12 +25,13 @@ export const Footer = () => {
               <div className="flex items-start gap-3 text-sm">
                 <MapPin className="w-5 h-5 mt-0.5 flex-shrink-0 text-primary" />
                 <address className="not-italic text-muted-foreground leading-relaxed">
-                  <span className="font-mono font-semibold text-foreground block mb-1 uppercase text-xs tracking-wider">Magnum Packaging</span>
-                  Industrial Area, Sector 5,<br />
-                  Hyderabad - 500004,<br />
-                  Telangana, India
+                  <span className="font-mono font-semibold text-foreground block mb-1 uppercase text-xs tracking-wider">Magnum Packaging LLP</span>
+                  Shed no. D-13, I.E. Medchal,<br />
+                  Hyderabad, Telangana - 501401,<br />
+                  India
                 </address>
               </div>
+
             </div>
 
             {/* Quick Links */}

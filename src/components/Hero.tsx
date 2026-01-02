@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button";
-import { Package } from "lucide-react";
 
 export const Hero = () => {
   const scrollToSection = (id: string) => {
@@ -14,7 +13,11 @@ export const Hero = () => {
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           {/* Logo - Left */}
           <div className="flex items-center gap-2 animate-fade-in">
-            <Package className="w-7 h-7 text-primary" />
+            <img
+              src="/Logo.jpeg"
+              alt="Magnum Packaging Logo"
+              className="w-10 h-10 object-contain"
+            />
             <span className="font-mono text-lg font-bold tracking-tight text-foreground">MAGNUM</span>
           </div>
 
@@ -113,9 +116,9 @@ export const Hero = () => {
         <h1
           className="font-display text-5xl md:text-7xl lg:text-8xl uppercase tracking-tight text-foreground line-reveal-1"
         >
-          Premium Cardboard
+          Magnum
           <br />
-          <span className="text-primary">Packaging</span>
+          <span className="text-primary">Packing</span>
         </h1>
 
         {/* Subheadline */}

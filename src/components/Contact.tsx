@@ -8,8 +8,12 @@ import {
 } from "@/components/ui/dropdown-menu";
 
 export const Contact = () => {
-  const phoneNumber = "1234567890";
-  const locationUrl = "https://maps.app.goo.gl/";
+  const phoneNumber = "919959674999";
+  const displayPhone = "+91 9959674999";
+  const contactPerson = "CH SSC Ravi Theja";
+  const email = "magnumpackagingllp@gmail.com";
+  const website = "www.magnumpackaging.in";
+  const locationUrl = "https://maps.google.com/?q=I.E.+Medchal+Hyderabad+Telangana+501401";
 
   const handleWhatsApp = () => {
     window.open(`https://wa.me/${phoneNumber}`, "_blank");
@@ -49,7 +53,7 @@ export const Contact = () => {
           </h2>
 
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Ready to discuss your packaging requirements? Our team is here to help you find the perfect solution.
+            Ready to discuss your packaging requirements? Contact <strong className="text-foreground">{contactPerson}</strong> and our team will help you find the perfect solution.
           </p>
 
           {/* Contact buttons - Koyeb style */}
@@ -60,9 +64,9 @@ export const Contact = () => {
               asChild
               className="btn-spark font-mono text-xs uppercase tracking-wider"
             >
-              <a href="mailto:info@magnumpackaging.com" className="gap-2">
+              <a href={`mailto:${email}`} className="gap-2">
                 <Mail className="w-5 h-5" />
-                info@magnumpackaging.com
+                {email}
               </a>
             </Button>
 
@@ -74,7 +78,7 @@ export const Contact = () => {
                   className="gap-2 btn-spark font-mono text-xs uppercase tracking-wider"
                 >
                   <MessageCircle className="w-5 h-5" />
-                  1234567890
+                  {displayPhone}
                 </Button>
               </DropdownMenuTrigger>
               <DropdownMenuContent align="center" className="w-56 bg-card border-border">

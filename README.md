@@ -274,7 +274,7 @@ npm run dev
 
 ```
     ╔════════════════════════════════════════════════════════════════════╗
-    ║                                                                    ║
+     ║                                                                   ║
     ║    📋 DESIGN  →  🏭 MANUFACTURE  →  ✅ QUALITY  →  🚚 DELIVER    ║
     ║       ↓              ↓                  ↓              ↓          ║
     ║    Custom         Premium           Rigorous        Fast &        ║
@@ -298,10 +298,10 @@ npm run dev
 │                                                                 │
 │   TYPE 1: STANDARD CORRUGATED                                   │
 │   ┌──────────────────┐                                          │
-│   │  ▓▓▓▓▓▓▓▓▓▓▓▓▓▓  │  • Single Wall                          │
-│   │  ▓            ▓  │  • Double Wall                          │
-│   │  ▓  MAGNUM    ▓  │  • Triple Wall                          │
-│   │  ▓            ▓  │  • Custom Sizes                         │
+│   │  ▓▓▓▓▓▓▓▓▓▓▓▓▓▓  │  • Single Wall                           │
+│   │  ▓            ▓  │  • Double Wall                           │
+│   │  ▓  MAGNUM    ▓  │  • Triple Wall                           │
+│   │  ▓            ▓  │  • Custom Sizes                          │
 │   │  ▓▓▓▓▓▓▓▓▓▓▓▓▓▓  │                                          │
 │   └──────────────────┘                                          │
 │                                                                 │
@@ -309,10 +309,10 @@ npm run dev
 │                                                                 │
 │   TYPE 2: CUSTOM PRINTED                                        │
 │   ┌──────────────────┐                                          │
-│   │ ╔══════════════╗ │  • Full Color Printing                  │
-│   │ ║ YOUR BRAND  ║ │  • Logo Integration                     │
-│   │ ║ YOUR DESIGN ║ │  • Custom Graphics                      │
-│   │ ║ YOUR STYLE  ║ │  • Premium Finish                       │
+│   │ ╔══════════════╗ │  • Full Color Printing                   │
+│   │ ║ YOUR BRAND   ║ │  • Logo Integration                      │
+│   │ ║ YOUR DESIGN  ║ │  • Custom Graphics                       │
+│   │ ║ YOUR STYLE   ║ │  • Premium Finish                        │
 │   │ ╚══════════════╝ │                                          │
 │   └──────────────────┘                                          │
 │                                                                 │
@@ -320,10 +320,10 @@ npm run dev
 │                                                                 │
 │   TYPE 3: HEAVY DUTY INDUSTRIAL                                 │
 │   ┌──────────────────┐                                          │
-│   │ ████████████████ │  • Extra Strength                       │
-│   │ ██ INDUSTRIAL ██ │  • Weather Resistant                    │
-│   │ ██ STRENGTH   ██ │  • Reinforced Corners                   │
-│   │ ██ PACKAGING  ██ │  • Maximum Protection                   │
+│   │ ████████████████ │  • Extra Strength                        │
+│   │ ██ INDUSTRIAL ██ │  • Weather Resistant                     │
+│   │ ██ STRENGTH   ██ │  • Reinforced Corners                    │
+│   │ ██ PACKAGING  ██ │  • Maximum Protection                    │
 │   │ ████████████████ │                                          │
 │   └──────────────────┘                                          │
 │                                                                 │
