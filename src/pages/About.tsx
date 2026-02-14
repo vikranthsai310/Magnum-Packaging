@@ -94,7 +94,7 @@ const About = () => {
                   <div className="absolute inset-0 rounded-full shadow-[inset_0_1px_2px_rgba(255,255,255,0.3)] opacity-0 group-hover/item:opacity-100 transition-opacity duration-500"></div>
                 </a>
                 <a
-                  href="/#contact"
+                  href="/contact"
                   className="relative px-5 py-2.5 rounded-full font-roboto text-xs md:text-[15px] font-bold uppercase tracking-wider text-foreground hover:text-primary transition-all duration-500 group/item overflow-hidden"
                 >
                   <span className="relative z-10">Contact Us</span>
@@ -125,7 +125,7 @@ const About = () => {
                   <div className="absolute -inset-1 rounded-full bg-gradient-to-r from-primary/30 via-primary/50 to-primary/30 opacity-0 group-hover/cta:opacity-100 blur-lg transition-opacity duration-700"></div>
                   
                   <Button
-                    onClick={() => scrollToSection("contact")}
+                    onClick={() => window.location.href = "/contact"}
                     className="relative btn-3d font-roboto text-xs md:text-[15px] font-bold uppercase tracking-wider shadow-[0_4px_16px_0_rgba(125,82,53,0.2)] hover:shadow-[0_6px_24px_0_rgba(125,82,53,0.3)] transition-all duration-700 px-6 md:px-7 py-2.5 md:py-3 rounded-full bg-gradient-to-br from-primary via-primary to-primary/90 hover:from-primary/95 hover:via-primary hover:to-primary text-white overflow-hidden"
                   >
                     {/* Top shine */}
@@ -261,7 +261,7 @@ const About = () => {
           {/* CTA Section */}
           <div className="text-center mt-16">
             <Button
-              onClick={() => scrollToSection("contact")}
+              onClick={() => window.location.href = "/contact"}
               className="relative btn-3d font-roboto text-sm md:text-base font-bold uppercase tracking-wider shadow-[0_4px_16px_0_rgba(125,82,53,0.2)] hover:shadow-[0_6px_24px_0_rgba(125,82,53,0.3)] transition-all duration-700 px-8 py-6 rounded-full bg-gradient-to-br from-primary via-primary to-primary/90 hover:from-primary/95 hover:via-primary hover:to-primary text-white overflow-hidden group"
             >
               <span className="relative z-10">Get in Touch</span>

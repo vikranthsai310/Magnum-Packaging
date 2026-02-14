@@ -22,25 +22,6 @@ export const Clientele = () => {
           <div className="w-24 h-1 bg-gradient-to-r from-primary via-accent to-secondary mx-auto rounded-full"></div>
         </div>
 
-        {/* Introduction */}
-        <div className="space-y-6 mb-16 text-center max-w-4xl mx-auto">
-          <p className="text-lg md:text-xl text-foreground/80 font-medium">
-            Warm Greetings!
-          </p>
-          
-          <p className="text-base md:text-lg text-foreground/70 leading-relaxed">
-            We introduce ourselves as one of the premier manufacturers of corrugated boxes and packaging solutions.
-          </p>
-          
-          <p className="text-base md:text-lg text-foreground/70 leading-relaxed">
-            We have a state-of-the-art <span className="font-semibold text-primary">Automatic 3-ply and 5-ply corrugated line</span> at I.E. Medchal, Hyderabad. The plant is capable of producing more than <span className="font-semibold text-primary">500 tons of corrugated boxes per shift per month</span>, which will be of excellent and consistent quality.
-          </p>
-          
-          <p className="text-base md:text-lg text-foreground/70 leading-relaxed">
-            We are a team of accomplished industry professionals and are well-versed with the quality requirements of packaging materials.
-          </p>
-        </div>
-
         {/* Clients Section */}
         <div className="mb-12">
           <h3 className="text-2xl md:text-3xl font-display text-center text-foreground mb-3">

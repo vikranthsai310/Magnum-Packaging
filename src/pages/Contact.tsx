@@ -1,13 +1,38 @@
+import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
+import { Mail, MessageCircle, Phone, MapPin } from "lucide-react";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
-export const Hero = () => {
+const Contact = () => {
   const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    element?.scrollIntoView({ behavior: "smooth" });
+    window.location.href = `/#${id}`;
+  };
+
+  const phoneNumber = "919959674999";
+  const displayPhone = "+91 9959674999";
+  const contactPerson = "CH SSC Ravi Theja";
+  const email = "magnumpackagingllp@gmail.com";
+  const locationUrl = "https://maps.google.com/?q=I.E.+Medchal+Hyderabad+Telangana+501401";
+
+  const handleWhatsApp = () => {
+    window.open(`https://wa.me/${phoneNumber}`, "_blank");
+  };
+
+  const handleCall = () => {
+    window.location.href = `tel:${phoneNumber}`;
+  };
+
+  const handleLocation = () => {
+    window.open(locationUrl, "_blank");
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center px-4 py-20 overflow-hidden">
+    <div className="min-h-screen">
       {/* Premium Kokonut UI Style Glossy Navigation Bar */}
       <nav className="fixed top-0 left-0 right-0 z-50 px-4 md:px-6 py-3 md:py-4">
         <div className="max-w-7xl mx-auto">
@@ -53,7 +78,7 @@ export const Hero = () => {
                 style={{ animationDelay: "100ms" }}
               >
                 <a
-                  href="#"
+                  href="/"
                   className="relative px-5 py-2.5 rounded-full font-roboto text-xs md:text-[15px] font-bold uppercase tracking-wider text-foreground hover:text-primary transition-all duration-500 group/item overflow-hidden"
                 >
                   <span className="relative z-10">Home</span>
@@ -69,7 +94,7 @@ export const Hero = () => {
                   <div className="absolute inset-0 rounded-full shadow-[inset_0_1px_2px_rgba(255,255,255,0.3)] opacity-0 group-hover/item:opacity-100 transition-opacity duration-500"></div>
                 </a>
                 <a
-                  href="#products"
+                  href="/#products"
                   className="relative px-5 py-2.5 rounded-full font-roboto text-xs md:text-[15px] font-bold uppercase tracking-wider text-foreground hover:text-primary transition-all duration-500 group/item overflow-hidden"
                 >
                   <span className="relative z-10">Products</span>
@@ -77,7 +102,7 @@ export const Hero = () => {
                   <div className="absolute inset-0 rounded-full shadow-[inset_0_1px_2px_rgba(255,255,255,0.3)] opacity-0 group-hover/item:opacity-100 transition-opacity duration-500"></div>
                 </a>
                 <a
-                  href="#clientele"
+                  href="/#clientele"
                   className="relative px-5 py-2.5 rounded-full font-roboto text-xs md:text-[15px] font-bold uppercase tracking-wider text-foreground hover:text-primary transition-all duration-500 group/item overflow-hidden"
                 >
                   <span className="relative z-10">Clientele</span>
@@ -85,7 +110,7 @@ export const Hero = () => {
                   <div className="absolute inset-0 rounded-full shadow-[inset_0_1px_2px_rgba(255,255,255,0.3)] opacity-0 group-hover/item:opacity-100 transition-opacity duration-500"></div>
                 </a>
                 <a
-                  href="#reach"
+                  href="/#reach"
                   className="relative px-5 py-2.5 rounded-full font-roboto text-xs md:text-[15px] font-bold uppercase tracking-wider text-foreground hover:text-primary transition-all duration-500 group/item overflow-hidden"
                 >
                   <span className="relative z-10">Our Reach</span>
@@ -94,11 +119,11 @@ export const Hero = () => {
                 </a>
                 <a
                   href="/contact"
-                  className="relative px-5 py-2.5 rounded-full font-roboto text-xs md:text-[15px] font-bold uppercase tracking-wider text-foreground hover:text-primary transition-all duration-500 group/item overflow-hidden"
+                  className="relative px-5 py-2.5 rounded-full font-roboto text-xs md:text-[15px] font-bold uppercase tracking-wider text-primary transition-all duration-500 group/item overflow-hidden"
                 >
                   <span className="relative z-10">Contact Us</span>
-                  <div className="absolute inset-0 rounded-full bg-gradient-to-br from-white/40 to-white/20 opacity-0 group-hover/item:opacity-100 transition-opacity duration-500"></div>
-                  <div className="absolute inset-0 rounded-full shadow-[inset_0_1px_2px_rgba(255,255,255,0.3)] opacity-0 group-hover/item:opacity-100 transition-opacity duration-500"></div>
+                  <div className="absolute inset-0 rounded-full bg-gradient-to-br from-white/40 to-white/20 opacity-100 transition-opacity duration-500"></div>
+                  <div className="absolute inset-0 rounded-full shadow-[inset_0_1px_2px_rgba(255,255,255,0.3)] opacity-100 transition-opacity duration-500"></div>
                 </a>
               </div>
 
@@ -106,7 +131,6 @@ export const Hero = () => {
               <button 
                 className="lg:hidden relative p-2 rounded-full transition-all duration-500 group/mobile overflow-hidden"
                 onClick={() => {
-                  // Mobile menu toggle
                   alert('Mobile menu - implement if needed');
                 }}
               >
@@ -124,7 +148,7 @@ export const Hero = () => {
                   <div className="absolute -inset-1 rounded-full bg-gradient-to-r from-primary/30 via-primary/50 to-primary/30 opacity-0 group-hover/cta:opacity-100 blur-lg transition-opacity duration-700"></div>
                   
                   <Button
-                    onClick={() => window.location.href = "/contact"}
+                    onClick={() => scrollToSection("contact")}
                     className="relative btn-3d font-roboto text-xs md:text-[15px] font-bold uppercase tracking-wider shadow-[0_4px_16px_0_rgba(125,82,53,0.2)] hover:shadow-[0_6px_24px_0_rgba(125,82,53,0.3)] transition-all duration-700 px-6 md:px-7 py-2.5 md:py-3 rounded-full bg-gradient-to-br from-primary via-primary to-primary/90 hover:from-primary/95 hover:via-primary hover:to-primary text-white overflow-hidden"
                   >
                     {/* Top shine */}
@@ -148,31 +172,76 @@ export const Hero = () => {
         </div>
       </nav>
 
-      {/* Premium Warehouse Background */}
-      <div className="absolute inset-0 -z-10">
-        {/* Background Image */}
-        <div className="absolute inset-0">
-          <img
-            src="/hero-warehouse.jpg"
-            alt="Magnum Packaging Warehouse"
-            className="w-full h-full object-cover"
-            onError={(e) => {
-              e.currentTarget.style.display = 'none';
-            }}
-          />
+      {/* Contact Section */}
+      <section className="relative pt-32 pb-20 px-4 overflow-hidden">
+        <div className="absolute inset-0 grid-lines opacity-30"></div>
+        
+        <div className="max-w-4xl mx-auto text-center relative z-10">
+          <div className="space-y-8 animate-fade-in">
+            {/* Header */}
+            <h2 className="font-display text-4xl md:text-5xl lg:text-6xl text-foreground mb-6">
+              Get in Touch
+            </h2>
+            <div className="w-24 h-1 bg-gradient-to-r from-primary via-accent to-secondary mx-auto rounded-full mb-8"></div>
+
+            <p className="text-lg text-foreground/70 max-w-2xl mx-auto leading-relaxed">
+              Ready to discuss your packaging requirements? Our team will help you find the perfect solution.
+            </p>
+
+            {/* Contact buttons - Koyeb style */}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center pt-8">
+              <Button
+                size="lg"
+                variant="outline"
+                asChild
+                className="btn-spark font-mono text-xs uppercase tracking-wider"
+              >
+                <a href={`mailto:${email}`} className="gap-2">
+                  <Mail className="w-5 h-5" />
+                  {email}
+                </a>
+              </Button>
+
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <Button
+                    size="lg"
+                    variant="outline"
+                    className="gap-2 btn-spark font-mono text-xs uppercase tracking-wider"
+                  >
+                    <MessageCircle className="w-5 h-5" />
+                    {displayPhone}
+                  </Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent align="center" className="w-56 bg-card border-border">
+                  <DropdownMenuItem onClick={handleWhatsApp} className="cursor-pointer gap-2 font-mono text-xs uppercase">
+                    <MessageCircle className="w-4 h-4" />
+                    <span>WhatsApp</span>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem onClick={handleCall} className="cursor-pointer gap-2 font-mono text-xs uppercase">
+                    <Phone className="w-4 h-4" />
+                    <span>Call</span>
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
+
+              <Button
+                size="lg"
+                variant="outline"
+                onClick={handleLocation}
+                className="gap-2 btn-spark font-mono text-xs uppercase tracking-wider"
+              >
+                <MapPin className="w-5 h-5" />
+                Our Factory
+              </Button>
+            </div>
+          </div>
         </div>
+      </section>
 
-        {/* Subtle dark overlay only at bottom for depth */}
-        <div
-          className="absolute inset-0"
-          style={{
-            background: 'linear-gradient(to top, rgba(0, 0, 0, 0.15) 0%, transparent 30%)'
-          }}
-        />
-      </div>
-
-      {/* Spacer for full screen height */}
-      <div className="h-screen"></div>
-    </section>
+      <Footer />
+    </div>
   );
 };
+
+export default Contact;

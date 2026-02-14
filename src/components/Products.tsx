@@ -1,124 +1,89 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Package, Box, Gift, Factory, Layers, Recycle } from "lucide-react";
-
-const productCategories = [
-  {
-    title: "Corrugated Boxes",
-    icon: Box,
-    items: [
-      { name: "Single Wall Boxes", desc: "Lightweight yet sturdy boxes ideal for retail products and e-commerce shipping." },
-      { name: "Double Wall Boxes", desc: "Enhanced protection for heavier items, industrial goods, and fragile products." },
-      { name: "Triple Wall Boxes", desc: "Maximum strength for heavy machinery, automotive parts, and bulk shipments." }
-    ]
-  },
-  {
-    title: "Custom Cartons",
-    icon: Package,
-    items: [
-      { name: "Die-Cut Boxes", desc: "Precision-cut boxes in custom shapes for unique product presentations." },
-      { name: "Printed Cartons", desc: "Full-color branded packaging with your logo, graphics, and product information." },
-      { name: "Folding Cartons", desc: "Space-efficient flat-packed cartons that assemble quickly on your production line." },
-      { name: "Mailer Boxes", desc: "Sleek, professional packaging perfect for subscription boxes and direct shipping." }
-    ]
-  },
-  {
-    title: "Industrial Packaging",
-    icon: Factory,
-    items: [
-      { name: "Heavy-Duty Crates", desc: "Robust cardboard crates for machinery, equipment, and bulk industrial goods." },
-      { name: "Pallet Boxes", desc: "Large-scale packaging solutions for warehouse storage and bulk transportation." },
-      { name: "Export Packaging", desc: "International shipping compliant packaging with moisture and shock protection." }
-    ]
-  },
-  {
-    title: "Retail Packaging",
-    icon: Gift,
-    items: [
-      { name: "Display Boxes", desc: "Eye-catching retail display packaging that showcases your products effectively." },
-      { name: "Gift Boxes", desc: "Premium presentation boxes for gifts, hampers, and luxury products." },
-      { name: "Food-Grade Boxes", desc: "Safe, certified packaging for food products and consumables." }
-    ]
-  },
-  {
-    title: "Specialty Solutions",
-    icon: Layers,
-    items: [
-      { name: "Partition Inserts", desc: "Custom dividers and inserts to secure multiple items within a single box." },
-      { name: "Protective Packaging", desc: "Corner protectors, edge guards, and cushioning solutions for fragile items." }
-    ]
-  },
-  {
-    title: "Sustainable Options",
-    icon: Recycle,
-    items: [
-      { name: "Recycled Cardboard", desc: "Eco-friendly packaging made from 100% recycled materials." },
-      { name: "Biodegradable Solutions", desc: "Fully biodegradable packaging that minimizes environmental footprint." }
-    ]
-  }
-];
-
 export const Products = () => {
+  const products = [
+    {
+      title: "3-Ply Corrugated Boxes",
+      description: "Lightweight and cost-effective packaging solutions"
+    },
+    {
+      title: "5-Ply Heavy-Duty Boxes",
+      description: "Enhanced strength for industrial and export applications"
+    },
+    {
+      title: "Printed Corrugated Packaging",
+      description: "Branding-focused packaging solutions"
+    },
+    {
+      title: "Die-Cut Boxes",
+      description: "Custom-designed packaging for specific product shapes"
+    },
+    {
+      title: "Bulk Industrial Packaging",
+      description: "High-volume supply for manufacturing and distribution businesses"
+    }
+  ];
+
   return (
-    <section id="products" className="py-24 px-4 relative overflow-hidden">
-      {/* Background */}
-      <div className="absolute inset-0 -z-10">
-        <div className="absolute inset-0 bg-muted/20" />
-        <div className="absolute inset-0 grid-lines opacity-10" />
-      </div>
-
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16 animate-fade-in">
-          {/* Koyeb-style label */}
-          <span className="font-mono text-xs uppercase tracking-widest text-primary mb-4 block">
-            [ Our Products ]
-          </span>
-
-          <h2 className="font-display text-4xl md:text-6xl uppercase tracking-tight text-foreground mb-6">
-            Packaging Solutions
+    <section id="products" className="relative py-20 md:py-32 px-4 overflow-hidden">
+      {/* Background with grid */}
+      <div className="absolute inset-0 grid-lines opacity-40"></div>
+      
+      <div className="max-w-5xl mx-auto relative z-10">
+        {/* Header */}
+        <div className="text-center mb-16 md:mb-20">
+          <h2 className="font-display text-4xl md:text-5xl lg:text-6xl text-foreground mb-6">
+            Products
           </h2>
-
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            From standard corrugated boxes to custom-designed packaging, we manufacture
-            solutions for every industry and requirement.
+          <div className="w-24 h-1 bg-gradient-to-r from-primary via-accent to-secondary mx-auto rounded-full mb-8"></div>
+          <p className="text-base md:text-lg text-foreground/70 leading-relaxed max-w-3xl mx-auto">
+            We manufacture customized corrugated packaging designed for strength, durability, and efficient logistics.
           </p>
         </div>
 
-        {/* Product Categories - Koyeb Card Style */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-20">
-          {productCategories.map((category, index) => {
-            const Icon = category.icon;
-            return (
-              <Card
-                key={index}
-                className="koyeb-card group"
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
-                <CardHeader className="pb-4">
-                  {/* Icon with border style */}
-                  <div className="w-10 h-10 rounded-md bg-primary/10 border border-primary/20 flex items-center justify-center mb-3 group-hover:bg-primary/20 transition-colors">
-                    <Icon className="w-5 h-5 text-primary" />
-                  </div>
-
-                  <CardTitle className="font-mono text-sm uppercase tracking-wide text-foreground">
-                    {category.title}
-                  </CardTitle>
-                </CardHeader>
-
-                <CardContent className="space-y-3 pt-0">
-                  {category.items.map((item, i) => (
-                    <div key={i} className="border-l-2 border-primary/30 pl-3">
-                      <h4 className="font-mono text-xs font-semibold text-foreground mb-1 uppercase">
-                        {item.name}
-                      </h4>
-                      <p className="text-xs text-muted-foreground leading-relaxed">
-                        {item.desc}
-                      </p>
-                    </div>
-                  ))}
-                </CardContent>
-              </Card>
-            );
-          })}
+        {/* Products Grid */}
+        <div className="grid md:grid-cols-2 gap-6 md:gap-8 mb-6 md:mb-8">
+          {products.slice(0, 4).map((product, index) => (
+            <div
+              key={index}
+              className="group relative backdrop-blur-sm bg-white/60 hover:bg-[#f5ebe0] border border-border/40 rounded-xl p-6 md:p-8 transition-all duration-500 hover:border-primary/40 hover:shadow-[0_12px_48px_rgba(125,82,53,0.15)] hover:-translate-y-2"
+              style={{ animationDelay: `${index * 100}ms` }}
+            >
+              
+              {/* Content */}
+              <div className="relative flex items-start gap-4">
+                <div className="w-3 h-3 rounded bg-primary mt-2 flex-shrink-0 group-hover:scale-125 transition-transform duration-300"></div>
+                <div>
+                  <h3 className="font-roboto font-bold text-foreground text-lg md:text-xl mb-3 group-hover:text-primary transition-colors duration-300">
+                    {product.title}
+                  </h3>
+                  <p className="text-foreground/70 text-sm md:text-base leading-relaxed">
+                    {product.description}
+                  </p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+        
+        {/* Centered Last Item */}
+        <div className="flex justify-center">
+          <div
+            className="group relative backdrop-blur-sm bg-white/60 hover:bg-[#f5ebe0] border border-border/40 rounded-xl p-6 md:p-8 transition-all duration-500 hover:border-primary/40 hover:shadow-[0_12px_48px_rgba(125,82,53,0.15)] hover:-translate-y-2 w-full md:w-1/2"
+            style={{ animationDelay: '400ms' }}
+          >
+            
+            {/* Content */}
+            <div className="relative flex items-start gap-4">
+              <div className="w-3 h-3 rounded bg-primary mt-2 flex-shrink-0 group-hover:scale-125 transition-transform duration-300"></div>
+              <div>
+                <h3 className="font-roboto font-bold text-foreground text-lg md:text-xl mb-3 group-hover:text-primary transition-colors duration-300">
+                  {products[4].title}
+                </h3>
+                <p className="text-foreground/70 text-sm md:text-base leading-relaxed">
+                  {products[4].description}
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

@@ -53,7 +53,7 @@ export const Contact = () => {
           </h2>
 
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Ready to discuss your packaging requirements? Contact <strong className="text-foreground">{contactPerson}</strong> and our team will help you find the perfect solution.
+            Ready to discuss your packaging requirements? Our team will help you find the perfect solution.
           </p>
 
           {/* Contact buttons - Koyeb style */}
