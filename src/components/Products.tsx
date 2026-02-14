@@ -70,7 +70,7 @@ export const Products = () => {
       {/* Background */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute inset-0 bg-muted/20" />
-        <div className="absolute inset-0 grid-lines opacity-30" />
+        <div className="absolute inset-0 grid-lines opacity-10" />
       </div>
 
       <div className="max-w-7xl mx-auto">

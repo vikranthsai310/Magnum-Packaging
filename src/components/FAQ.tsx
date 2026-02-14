@@ -38,7 +38,7 @@ export const FAQ = () => {
       {/* Background */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute inset-0 bg-background" />
-        <div className="absolute inset-0 grid-lines opacity-30" />
+        <div className="absolute inset-0 grid-lines opacity-10" />
       </div>
 
       <div className="max-w-4xl mx-auto">

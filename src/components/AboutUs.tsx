@@ -3,7 +3,7 @@ export const AboutUs = () => {
     <section id="about" className="py-24 px-4 relative overflow-hidden">
       {/* Section background with grid */}
       <div className="absolute inset-0 -z-10 bg-muted/30">
-        <div className="absolute inset-0 grid-lines opacity-30" />
+        <div className="absolute inset-0 grid-lines opacity-10" />
       </div>
 
       <div className="max-w-4xl mx-auto">
