@@ -1,5 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Package, Box, Truck, Gift, Factory, Layers, Boxes, Recycle } from "lucide-react";
+import { Package, Box, Gift, Factory, Layers, Recycle } from "lucide-react";
 
 const productCategories = [
   {
@@ -55,13 +55,6 @@ const productCategories = [
       { name: "Biodegradable Solutions", desc: "Fully biodegradable packaging that minimizes environmental footprint." }
     ]
   }
-];
-
-const valueAddedServices = [
-  { icon: Factory, title: "In-House Manufacturing", desc: "Complete production control from raw material to finished product." },
-  { icon: Truck, title: "Pan-India Delivery", desc: "Reliable logistics network ensuring timely delivery across India." },
-  { icon: Boxes, title: "Bulk Order Discounts", desc: "Competitive pricing for large volume orders." },
-  { icon: Package, title: "Custom Design Support", desc: "Expert team to help design packaging that fits your exact needs." }
 ];
 
 export const Products = () => {
@@ -126,44 +119,6 @@ export const Products = () => {
               </Card>
             );
           })}
-        </div>
-
-        {/* Value Added Services */}
-        <div className="mt-20">
-          <div className="text-center mb-12">
-            <span className="font-mono text-xs uppercase tracking-widest text-primary mb-4 block">
-              [ Added Value ]
-            </span>
-            <h3 className="font-display text-3xl md:text-4xl uppercase tracking-tight text-foreground">
-              Value-Added Services
-            </h3>
-          </div>
-
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {valueAddedServices.map((service, index) => {
-              const Icon = service.icon;
-              return (
-                <Card
-                  key={index}
-                  className="koyeb-card text-center group"
-                >
-                  <CardContent className="p-6">
-                    <div className="w-12 h-12 rounded-md bg-accent/10 border border-accent/20 flex items-center justify-center mb-4 mx-auto group-hover:bg-accent/20 transition-colors">
-                      <Icon className="w-6 h-6 text-accent" />
-                    </div>
-
-                    <h4 className="font-mono text-xs font-bold mb-2 text-foreground uppercase tracking-wide">
-                      {service.title}
-                    </h4>
-
-                    <p className="text-xs text-muted-foreground leading-relaxed">
-                      {service.desc}
-                    </p>
-                  </CardContent>
-                </Card>
-              );
-            })}
-          </div>
         </div>
       </div>
     </section>
