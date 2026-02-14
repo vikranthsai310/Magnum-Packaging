@@ -116,7 +116,7 @@ export const Footer = () => {
       <div className="bg-primary py-4">
         <div className="max-w-7xl mx-auto px-6">
           <p className="font-mono text-xs text-primary-foreground text-center uppercase tracking-widest">
-            © 2024 Magnum Packaging · Hyderabad, India
+            © 2026 Magnum Packaging · Hyderabad, India
           </p>
         </div>
       </div>
