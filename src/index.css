@@ -219,9 +219,9 @@
     background: linear-gradient(
       135deg,
       transparent 40%,
-      rgba(212, 160, 32, 0.4) 48%,
-      rgba(232, 168, 50, 0.7) 50%,
-      rgba(212, 160, 32, 0.4) 52%,
+      rgba(125, 82, 53, 0.3) 48%,
+      rgba(170, 90, 56, 0.5) 50%,
+      rgba(125, 82, 53, 0.3) 52%,
       transparent 60%
     );
     background-size: 200% 200%;
@@ -237,10 +237,10 @@
   /* Subtle glow pulse for accents */
   @keyframes glow-pulse {
     0%, 100% { 
-      box-shadow: 0 0 20px rgba(212, 160, 32, 0.2);
+      box-shadow: 0 0 20px rgba(125, 82, 53, 0.15);
     }
     50% { 
-      box-shadow: 0 0 40px rgba(212, 160, 32, 0.4);
+      box-shadow: 0 0 40px rgba(125, 82, 53, 0.25);
     }
   }
 
@@ -288,14 +288,14 @@
 
 .koyeb-card:hover {
   @apply border-primary/30;
-  box-shadow: 0 4px 24px rgba(212, 160, 32, 0.1);
+  box-shadow: 0 4px 24px rgba(125, 82, 53, 0.12);
 }
 
 /* Koyeb news banner / tag style */
 .news-banner {
   @apply inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-mono uppercase tracking-wide;
-  background: linear-gradient(135deg, rgba(170, 90, 56, 0.3) 0%, rgba(232, 168, 50, 0.2) 100%);
-  border: 1px solid rgba(212, 160, 32, 0.3);
+  background: linear-gradient(135deg, rgba(125, 82, 53, 0.12) 0%, rgba(170, 90, 56, 0.08) 100%);
+  border: 1px solid rgba(125, 82, 53, 0.2);
 }
 
 /* Footer high-contrast section */

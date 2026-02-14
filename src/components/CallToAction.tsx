@@ -10,12 +10,12 @@ export const CallToAction = () => {
       {/* Background with amber glow */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute inset-0 bg-primary/5" />
-        <div className="absolute inset-0 grid-lines opacity-20" />
+        <div className="absolute inset-0 grid-lines opacity-15" />
         {/* Central glow */}
         <div
           className="absolute inset-0 pointer-events-none"
           style={{
-            background: 'radial-gradient(ellipse at 50% 50%, rgba(212, 160, 32, 0.12) 0%, transparent 60%)'
+            background: 'radial-gradient(ellipse at 50% 50%, rgba(125, 82, 53, 0.06) 0%, transparent 60%)'
           }}
         />
       </div>

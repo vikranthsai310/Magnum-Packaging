@@ -32,11 +32,11 @@ export const Contact = () => {
       {/* Background with central glow */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute inset-0 bg-muted/30" />
-        <div className="absolute inset-0 grid-lines opacity-25" />
+        <div className="absolute inset-0 grid-lines opacity-20" />
         <div
           className="absolute inset-0 pointer-events-none"
           style={{
-            background: 'radial-gradient(ellipse at 50% 100%, rgba(212, 160, 32, 0.08) 0%, transparent 50%)'
+            background: 'radial-gradient(ellipse at 50% 100%, rgba(125, 82, 53, 0.05) 0%, transparent 50%)'
           }}
         />
       </div>
