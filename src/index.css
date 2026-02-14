@@ -248,6 +248,20 @@
     animation: glow-pulse 3s ease-in-out infinite;
   }
 
+  /* Kokonut UI Glossy Shimmer Effect */
+  @keyframes glossy-shimmer {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+
+  .duration-1500 {
+    transition-duration: 1500ms;
+  }
+
   /* Fade in animation */
   @keyframes fade-in {
     from {
