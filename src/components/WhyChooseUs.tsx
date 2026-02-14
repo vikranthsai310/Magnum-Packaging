@@ -35,12 +35,12 @@ export const WhyChooseUs = () => {
       {/* Background */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute inset-0 bg-background" />
-        <div className="absolute inset-0 grid-lines opacity-40" />
-        {/* Subtle amber glow */}
+        <div className="absolute inset-0 grid-lines opacity-20" />
+        {/* Subtle warm brown accent */}
         <div
           className="absolute inset-0 pointer-events-none"
           style={{
-            background: 'radial-gradient(ellipse at 50% 0%, rgba(212, 160, 32, 0.08) 0%, transparent 60%)'
+            background: 'radial-gradient(ellipse at 50% 0%, rgba(125, 82, 53, 0.05) 0%, transparent 60%)'
           }}
         />
       </div>

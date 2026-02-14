@@ -9,53 +9,53 @@
 
 @layer base {
   :root {
-    /* Main Background - Deep Coffee Brown with grainy texture look */
-    --background: 20 35% 12%;  /* #2D1B0D - Deep coffee brown */
-    --foreground: 40 30% 90%;  /* #F5EDE0 - Warm cream/beige */
+    /* Main Background - Whitish Light Brown */
+    --background: 30 40% 94%;  /* #F5F0E8 - Warm whitish beige */
+    --foreground: 20 35% 15%;  /* #3A2515 - Dark brown text */
 
-    /* Card - Slightly lighter brown with subtle transparency feel */
-    --card: 20 30% 15%;        /* #3A2515 - Lighter coffee */
-    --card-foreground: 40 30% 90%;
+    /* Card - Slightly darker warm white */
+    --card: 30 35% 97%;        /* #FDFBF7 - Very light warm white */
+    --card-foreground: 20 35% 15%;
 
     /* Popover - Same as card */
-    --popover: 20 30% 15%;
-    --popover-foreground: 40 30% 90%;
+    --popover: 30 35% 97%;
+    --popover-foreground: 20 35% 15%;
 
-    /* Primary - Warm Gold/Amber for CTAs (replacing Koyeb green) */
-    --primary: 38 70% 50%;     /* #D4A020 - Rich gold */
-    --primary-foreground: 20 35% 10%;
+    /* Primary - Warm Brown for CTAs */
+    --primary: 25 55% 35%;     /* #7D5235 - Rich medium brown */
+    --primary-foreground: 30 40% 98%;
 
     /* Secondary - Burnt Sienna/Terracotta */
     --secondary: 15 50% 45%;   /* #AA5A38 - Terracotta */
-    --secondary-foreground: 40 30% 90%;
+    --secondary-foreground: 30 40% 98%;
 
-    /* Accent - Bright Amber glow */
-    --accent: 35 85% 55%;      /* #E8A832 - Bright amber */
-    --accent-foreground: 20 35% 10%;
+    /* Accent - Warm Amber */
+    --accent: 35 70% 60%;      /* #E5B35C - Warm amber */
+    --accent-foreground: 20 35% 15%;
 
-    /* Muted - Dark brown tones */
-    --muted: 20 25% 20%;       /* #423024 - Muted brown */
-    --muted-foreground: 30 15% 55%; /* #8F7F6E - Warm grey-brown */
+    /* Muted - Light brown tones */
+    --muted: 30 30% 88%;       /* #E8E0D3 - Light beige */
+    --muted-foreground: 25 20% 40%; /* #735F4D - Medium brown */
 
     /* Destructive */
     --destructive: 0 60% 50%;
-    --destructive-foreground: 40 30% 90%;
+    --destructive-foreground: 30 40% 98%;
 
     /* Success - Olive/Forest green that complements brown */
     --success: 90 35% 45%;
-    --success-foreground: 40 30% 90%;
+    --success-foreground: 30 40% 98%;
 
     /* Border & Input */
-    --border: 25 20% 25%;      /* #4A3828 - Brown border */
-    --input: 25 20% 25%;
-    --ring: 38 70% 50%;
+    --border: 30 25% 80%;      /* #DDD3C5 - Light brown border */
+    --input: 30 25% 80%;
+    --ring: 25 55% 35%;
 
     --radius: 0.375rem;        /* 6px - Koyeb uses subtle rounding */
 
-    /* Shadows with warm brown tint */
-    --shadow-soft: 0 10px 40px rgba(45, 27, 13, 0.4);
-    --shadow-card: 0 4px 20px rgba(45, 27, 13, 0.3);
-    --shadow-3d: inset 0 -4px 0 0 rgba(0, 0, 0, 0.3);
+    /* Shadows with warm brown tint for light background */
+    --shadow-soft: 0 10px 40px rgba(125, 82, 53, 0.12);
+    --shadow-card: 0 4px 20px rgba(125, 82, 53, 0.08);
+    --shadow-3d: inset 0 -4px 0 0 rgba(125, 82, 53, 0.1);
     
     /* Transitions */
     --transition-smooth: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -83,7 +83,7 @@
     inset: 0;
     pointer-events: none;
     z-index: 9999;
-    opacity: 0.08;
+    opacity: 0.03;
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
   }
 }
@@ -122,8 +122,8 @@
   /* Koyeb-style nav pill container */
   .nav-pill-container {
     @apply backdrop-blur-md rounded-lg px-2 py-2;
-    background: rgba(74, 56, 40, 0.85);
-    border: 1px solid rgba(212, 160, 32, 0.15);
+    background: rgba(255, 255, 255, 0.6);
+    border: 1px solid rgba(125, 82, 53, 0.15);
   }
 
   /* Koyeb uppercase monospace labels */
@@ -134,8 +134,8 @@
   /* Koyeb thin grid lines */
   .grid-lines {
     background-image: 
-      linear-gradient(to right, rgba(212, 160, 32, 0.06) 1px, transparent 1px),
-      linear-gradient(to bottom, rgba(212, 160, 32, 0.06) 1px, transparent 1px);
+      linear-gradient(to right, rgba(125, 82, 53, 0.08) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(125, 82, 53, 0.08) 1px, transparent 1px);
     background-size: 60px 60px;
   }
 }

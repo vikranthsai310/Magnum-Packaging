@@ -66,37 +66,37 @@ export const Hero = () => {
 
       {/* Koyeb-Style Background with Brown Theme */}
       <div className="absolute inset-0 -z-10">
-        {/* Base deep brown background */}
+        {/* Base light brown background */}
         <div className="absolute inset-0 bg-background" />
 
         {/* Grid lines overlay - Koyeb style */}
-        <div className="absolute inset-0 grid-lines opacity-60 lattice-drift" />
+        <div className="absolute inset-0 grid-lines opacity-30 lattice-drift" />
 
-        {/* Radial amber glow from edges - replacing Koyeb's blue glows */}
+        {/* Radial warm brown accents from edges */}
         <div
           className="absolute inset-0 pointer-events-none"
           style={{
             background: `
-              radial-gradient(ellipse at 0% 0%, rgba(212, 160, 32, 0.15) 0%, transparent 50%),
-              radial-gradient(ellipse at 100% 0%, rgba(232, 168, 50, 0.12) 0%, transparent 50%),
-              radial-gradient(ellipse at 50% 100%, rgba(170, 90, 56, 0.1) 0%, transparent 50%)
+              radial-gradient(ellipse at 0% 0%, rgba(125, 82, 53, 0.08) 0%, transparent 50%),
+              radial-gradient(ellipse at 100% 0%, rgba(170, 90, 56, 0.06) 0%, transparent 50%),
+              radial-gradient(ellipse at 50% 100%, rgba(212, 160, 32, 0.05) 0%, transparent 50%)
             `
           }}
         />
 
-        {/* Center spotlight for text legibility */}
+        {/* Center subtle depth */}
         <div
           className="absolute inset-0 pointer-events-none"
           style={{
-            background: 'radial-gradient(circle at 50% 40%, rgba(45, 27, 13, 0) 0%, rgba(45, 27, 13, 0.4) 60%, rgba(45, 27, 13, 0.7) 100%)'
+            background: 'radial-gradient(circle at 50% 40%, rgba(245, 240, 232, 0) 0%, rgba(232, 224, 211, 0.3) 80%)'
           }}
         />
 
-        {/* Diagonal scan sweep animation - amber tint */}
+        {/* Diagonal scan sweep animation - warm tint */}
         <div
           className="absolute inset-0 pointer-events-none scan-sweep"
           style={{
-            background: 'linear-gradient(135deg, transparent 30%, rgba(212, 160, 32, 0.08) 48%, rgba(232, 168, 50, 0.12) 50%, rgba(212, 160, 32, 0.08) 52%, transparent 70%)',
+            background: 'linear-gradient(135deg, transparent 30%, rgba(125, 82, 53, 0.04) 48%, rgba(170, 90, 56, 0.06) 50%, rgba(125, 82, 53, 0.04) 52%, transparent 70%)',
             backgroundSize: '200% 200%'
           }}
         />
