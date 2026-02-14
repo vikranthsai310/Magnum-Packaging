@@ -161,7 +161,7 @@ const About = () => {
               <img 
                 src="/magnum-logo.png" 
                 alt="Magnum Packaging LLP" 
-                className="h-20 md:h-24 w-auto object-contain drop-shadow-lg"
+                className="h-20 md:h-24 w-auto object-contain"
               />
             </div>
 
