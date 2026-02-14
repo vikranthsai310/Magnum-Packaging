@@ -1,5 +1,3 @@
-import { MapPin } from "lucide-react";
-
 export const OurReach = () => {
   return (
     <section className="py-24 px-4 relative overflow-hidden bg-muted/20">
@@ -10,13 +8,6 @@ export const OurReach = () => {
 
       <div className="max-w-4xl mx-auto text-center">
         <div className="space-y-8 animate-fade-in">
-          {/* Icon */}
-          <div className="flex justify-center">
-            <div className="w-16 h-16 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center">
-              <MapPin className="w-8 h-8 text-primary" />
-            </div>
-          </div>
-
           {/* Title */}
           <div className="space-y-3">
             <h2 className="font-display text-4xl md:text-5xl uppercase tracking-tight text-foreground">
