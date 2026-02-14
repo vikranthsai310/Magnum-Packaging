@@ -11,11 +11,13 @@ export const Footer = () => {
             <div className="space-y-6">
               <div className="flex items-center gap-3">
                 <img
-                  src="/Logo.jpeg"
+                  src="/magnum-logo.png"
                   alt="Magnum Packaging Logo"
-                  className="w-8 h-8 object-contain"
+                  className="h-10 object-contain"
+                  onError={(e) => {
+                    e.currentTarget.style.display = 'none';
+                  }}
                 />
-                <span className="font-mono text-lg font-bold tracking-tight text-foreground">MAGNUM PACKAGING</span>
               </div>
 
               <p className="text-sm text-muted-foreground leading-relaxed">
