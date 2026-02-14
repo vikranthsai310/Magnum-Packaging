@@ -56,6 +56,7 @@ export default {
         sans: ["Inter", "system-ui", "sans-serif"],
         display: ["Anton", "system-ui", "sans-serif"],
         mono: ["JetBrains Mono", "monospace"],
+        roboto: ["Roboto", "sans-serif"],
       },
       boxShadow: {
         soft: "var(--shadow-soft)",

@@ -54,7 +54,7 @@ export const Hero = () => {
               >
                 <a
                   href="#"
-                  className="relative px-5 py-2.5 rounded-full font-mono text-xs md:text-[15px] font-semibold uppercase tracking-wider text-foreground/90 hover:text-primary transition-all duration-500 group/item overflow-hidden"
+                  className="relative px-5 py-2.5 rounded-full font-roboto text-xs md:text-[15px] font-bold uppercase tracking-wider text-foreground hover:text-primary transition-all duration-500 group/item overflow-hidden"
                 >
                   <span className="relative z-10">Home</span>
                   <div className="absolute inset-0 rounded-full bg-gradient-to-br from-white/40 to-white/20 opacity-0 group-hover/item:opacity-100 transition-opacity duration-500"></div>
@@ -62,7 +62,7 @@ export const Hero = () => {
                 </a>
                 <a
                   href="#about"
-                  className="relative px-5 py-2.5 rounded-full font-mono text-xs md:text-[15px] font-semibold uppercase tracking-wider text-foreground/90 hover:text-primary transition-all duration-500 group/item overflow-hidden"
+                  className="relative px-5 py-2.5 rounded-full font-roboto text-xs md:text-[15px] font-bold uppercase tracking-wider text-foreground hover:text-primary transition-all duration-500 group/item overflow-hidden"
                 >
                   <span className="relative z-10">About Us</span>
                   <div className="absolute inset-0 rounded-full bg-gradient-to-br from-white/40 to-white/20 opacity-0 group-hover/item:opacity-100 transition-opacity duration-500"></div>
@@ -70,7 +70,7 @@ export const Hero = () => {
                 </a>
                 <a
                   href="#products"
-                  className="relative px-5 py-2.5 rounded-full font-mono text-xs md:text-[15px] font-semibold uppercase tracking-wider text-foreground/90 hover:text-primary transition-all duration-500 group/item overflow-hidden"
+                  className="relative px-5 py-2.5 rounded-full font-roboto text-xs md:text-[15px] font-bold uppercase tracking-wider text-foreground hover:text-primary transition-all duration-500 group/item overflow-hidden"
                 >
                   <span className="relative z-10">Products</span>
                   <div className="absolute inset-0 rounded-full bg-gradient-to-br from-white/40 to-white/20 opacity-0 group-hover/item:opacity-100 transition-opacity duration-500"></div>
@@ -78,7 +78,7 @@ export const Hero = () => {
                 </a>
                 <a
                   href="#clientele"
-                  className="relative px-5 py-2.5 rounded-full font-mono text-xs md:text-[15px] font-semibold uppercase tracking-wider text-foreground/90 hover:text-primary transition-all duration-500 group/item overflow-hidden"
+                  className="relative px-5 py-2.5 rounded-full font-roboto text-xs md:text-[15px] font-bold uppercase tracking-wider text-foreground hover:text-primary transition-all duration-500 group/item overflow-hidden"
                 >
                   <span className="relative z-10">Clientele</span>
                   <div className="absolute inset-0 rounded-full bg-gradient-to-br from-white/40 to-white/20 opacity-0 group-hover/item:opacity-100 transition-opacity duration-500"></div>
@@ -86,7 +86,7 @@ export const Hero = () => {
                 </a>
                 <a
                   href="#reach"
-                  className="relative px-5 py-2.5 rounded-full font-mono text-xs md:text-[15px] font-semibold uppercase tracking-wider text-foreground/90 hover:text-primary transition-all duration-500 group/item overflow-hidden"
+                  className="relative px-5 py-2.5 rounded-full font-roboto text-xs md:text-[15px] font-bold uppercase tracking-wider text-foreground hover:text-primary transition-all duration-500 group/item overflow-hidden"
                 >
                   <span className="relative z-10">Our Reach</span>
                   <div className="absolute inset-0 rounded-full bg-gradient-to-br from-white/40 to-white/20 opacity-0 group-hover/item:opacity-100 transition-opacity duration-500"></div>
@@ -94,7 +94,7 @@ export const Hero = () => {
                 </a>
                 <a
                   href="#contact"
-                  className="relative px-5 py-2.5 rounded-full font-mono text-xs md:text-[15px] font-semibold uppercase tracking-wider text-foreground/90 hover:text-primary transition-all duration-500 group/item overflow-hidden"
+                  className="relative px-5 py-2.5 rounded-full font-roboto text-xs md:text-[15px] font-bold uppercase tracking-wider text-foreground hover:text-primary transition-all duration-500 group/item overflow-hidden"
                 >
                   <span className="relative z-10">Contact Us</span>
                   <div className="absolute inset-0 rounded-full bg-gradient-to-br from-white/40 to-white/20 opacity-0 group-hover/item:opacity-100 transition-opacity duration-500"></div>
@@ -125,7 +125,7 @@ export const Hero = () => {
                   
                   <Button
                     onClick={() => scrollToSection("contact")}
-                    className="relative btn-3d font-mono text-xs md:text-[15px] uppercase tracking-wider shadow-[0_4px_16px_0_rgba(125,82,53,0.2)] hover:shadow-[0_6px_24px_0_rgba(125,82,53,0.3)] transition-all duration-700 px-6 md:px-7 py-2.5 md:py-3 rounded-full bg-gradient-to-br from-primary via-primary to-primary/90 hover:from-primary/95 hover:via-primary hover:to-primary text-white overflow-hidden"
+                    className="relative btn-3d font-roboto text-xs md:text-[15px] font-bold uppercase tracking-wider shadow-[0_4px_16px_0_rgba(125,82,53,0.2)] hover:shadow-[0_6px_24px_0_rgba(125,82,53,0.3)] transition-all duration-700 px-6 md:px-7 py-2.5 md:py-3 rounded-full bg-gradient-to-br from-primary via-primary to-primary/90 hover:from-primary/95 hover:via-primary hover:to-primary text-white overflow-hidden"
                   >
                     {/* Top shine */}
                     <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/40 to-transparent"></div>
