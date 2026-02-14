@@ -17,7 +17,7 @@ const Contact = () => {
   const displayPhone = "+91 9959674999";
   const contactPerson = "CH SSC Ravi Theja";
   const email = "magnumpackagingllp@gmail.com";
-  const locationUrl = "https://maps.google.com/?q=I.E.+Medchal+Hyderabad+Telangana+501401";
+  const locationUrl = "https://maps.app.goo.gl/mCkbAmmweNMh2xdZ7";
 
   const handleWhatsApp = () => {
     window.open(`https://wa.me/${phoneNumber}`, "_blank");
@@ -194,7 +194,7 @@ const Contact = () => {
                 size="lg"
                 variant="outline"
                 asChild
-                className="btn-spark font-mono text-xs uppercase tracking-wider"
+                className="btn-spark font-mono text-xs uppercase tracking-wider rounded-full"
               >
                 <a href={`mailto:${email}`} className="gap-2">
                   <Mail className="w-5 h-5" />
@@ -207,7 +207,7 @@ const Contact = () => {
                   <Button
                     size="lg"
                     variant="outline"
-                    className="gap-2 btn-spark font-mono text-xs uppercase tracking-wider"
+                    className="gap-2 btn-spark font-mono text-xs uppercase tracking-wider rounded-full"
                   >
                     <MessageCircle className="w-5 h-5" />
                     {displayPhone}
@@ -229,7 +229,7 @@ const Contact = () => {
                 size="lg"
                 variant="outline"
                 onClick={handleLocation}
-                className="gap-2 btn-spark font-mono text-xs uppercase tracking-wider"
+                className="gap-2 btn-spark font-mono text-xs uppercase tracking-wider rounded-full"
               >
                 <MapPin className="w-5 h-5" />
                 Our Factory

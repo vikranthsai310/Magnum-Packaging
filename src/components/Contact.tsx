@@ -13,7 +13,7 @@ export const Contact = () => {
   const contactPerson = "CH SSC Ravi Theja";
   const email = "magnumpackagingllp@gmail.com";
   const website = "www.magnumpackaging.in";
-  const locationUrl = "https://maps.google.com/?q=I.E.+Medchal+Hyderabad+Telangana+501401";
+  const locationUrl = "https://maps.app.goo.gl/mCkbAmmweNMh2xdZ7";
 
   const handleWhatsApp = () => {
     window.open(`https://wa.me/${phoneNumber}`, "_blank");
@@ -43,11 +43,6 @@ export const Contact = () => {
 
       <div className="max-w-4xl mx-auto text-center">
         <div className="space-y-8 animate-fade-in">
-          {/* Koyeb-style label */}
-          <span className="font-mono text-xs uppercase tracking-widest text-primary block">
-            [ Contact ]
-          </span>
-
           <h2 className="font-display text-4xl md:text-6xl uppercase tracking-tight text-foreground">
             Get in Touch
           </h2>
@@ -62,7 +57,7 @@ export const Contact = () => {
               size="lg"
               variant="outline"
               asChild
-              className="btn-spark font-mono text-xs uppercase tracking-wider"
+              className="btn-spark font-mono text-xs uppercase tracking-wider rounded-full"
             >
               <a href={`mailto:${email}`} className="gap-2">
                 <Mail className="w-5 h-5" />
@@ -75,7 +70,7 @@ export const Contact = () => {
                 <Button
                   size="lg"
                   variant="outline"
-                  className="gap-2 btn-spark font-mono text-xs uppercase tracking-wider"
+                  className="gap-2 btn-spark font-mono text-xs uppercase tracking-wider rounded-full"
                 >
                   <MessageCircle className="w-5 h-5" />
                   {displayPhone}
@@ -97,7 +92,7 @@ export const Contact = () => {
               size="lg"
               variant="outline"
               onClick={handleLocation}
-              className="gap-2 btn-spark font-mono text-xs uppercase tracking-wider"
+              className="gap-2 btn-spark font-mono text-xs uppercase tracking-wider rounded-full"
             >
               <MapPin className="w-5 h-5" />
               Our Factory
