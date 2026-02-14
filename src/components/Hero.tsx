@@ -61,6 +61,14 @@ export const Hero = () => {
                   <div className="absolute inset-0 rounded-full shadow-[inset_0_1px_2px_rgba(255,255,255,0.3)] opacity-0 group-hover/item:opacity-100 transition-opacity duration-500"></div>
                 </a>
                 <a
+                  href="#about"
+                  className="relative px-5 py-2.5 rounded-full font-mono text-xs md:text-[15px] font-semibold uppercase tracking-wider text-foreground/90 hover:text-primary transition-all duration-500 group/item overflow-hidden"
+                >
+                  <span className="relative z-10">About Us</span>
+                  <div className="absolute inset-0 rounded-full bg-gradient-to-br from-white/40 to-white/20 opacity-0 group-hover/item:opacity-100 transition-opacity duration-500"></div>
+                  <div className="absolute inset-0 rounded-full shadow-[inset_0_1px_2px_rgba(255,255,255,0.3)] opacity-0 group-hover/item:opacity-100 transition-opacity duration-500"></div>
+                </a>
+                <a
                   href="#products"
                   className="relative px-5 py-2.5 rounded-full font-mono text-xs md:text-[15px] font-semibold uppercase tracking-wider text-foreground/90 hover:text-primary transition-all duration-500 group/item overflow-hidden"
                 >
@@ -81,14 +89,6 @@ export const Hero = () => {
                   className="relative px-5 py-2.5 rounded-full font-mono text-xs md:text-[15px] font-semibold uppercase tracking-wider text-foreground/90 hover:text-primary transition-all duration-500 group/item overflow-hidden"
                 >
                   <span className="relative z-10">Our Reach</span>
-                  <div className="absolute inset-0 rounded-full bg-gradient-to-br from-white/40 to-white/20 opacity-0 group-hover/item:opacity-100 transition-opacity duration-500"></div>
-                  <div className="absolute inset-0 rounded-full shadow-[inset_0_1px_2px_rgba(255,255,255,0.3)] opacity-0 group-hover/item:opacity-100 transition-opacity duration-500"></div>
-                </a>
-                <a
-                  href="#about"
-                  className="relative px-5 py-2.5 rounded-full font-mono text-xs md:text-[15px] font-semibold uppercase tracking-wider text-foreground/90 hover:text-primary transition-all duration-500 group/item overflow-hidden"
-                >
-                  <span className="relative z-10">About Us</span>
                   <div className="absolute inset-0 rounded-full bg-gradient-to-br from-white/40 to-white/20 opacity-0 group-hover/item:opacity-100 transition-opacity duration-500"></div>
                   <div className="absolute inset-0 rounded-full shadow-[inset_0_1px_2px_rgba(255,255,255,0.3)] opacity-0 group-hover/item:opacity-100 transition-opacity duration-500"></div>
                 </a>
