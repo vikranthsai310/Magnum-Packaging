@@ -249,7 +249,7 @@ const About = () => {
                   key={index}
                   className="flex items-start gap-3 p-4 rounded-lg bg-white/40 border border-primary/10 hover:border-primary/30 transition-colors duration-300"
                 >
-                  <div className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0"></div>
+                  <div className="w-3 h-3 rounded bg-primary mt-1.5 flex-shrink-0"></div>
                   <p className="font-roboto font-bold text-sm md:text-base text-foreground/90">
                     {capability}
                   </p>
