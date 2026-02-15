@@ -1,11 +1,13 @@
 export const Clientele = () => {
   const clients = [
-    "Apricot Foods Private Limited",
-    "Daram Pal & Satyapal Group (Pass Pass)",
-    "Future Group",
-    "DJ Group (Pan Bahar)",
-    "Sampre Nutritions Limited",
-    "Alpenliebe (Perfetti)",
+    { name: "DJ Group", logo: "/clients/dj%20group.jpeg" },
+    { name: "Future Group", logo: "/clients/future%20group.jpeg" },
+    { name: "DS Group", logo: "/clients/Ds%20group.jpeg" },
+    { name: "Rockwell", logo: "/clients/rockwell.jpeg" },
+    { name: "Perfetti van Melle", logo: "/clients/perfetti.jpeg" },
+    { name: "RP-Sanjiv Goenka Group", logo: "/clients/rp%20sanjiv%20goenka%20group.jpeg" },
+    { name: "Sampre Nutritions", logo: "/clients/sampre.jpeg" },
+    { name: "SR Group", logo: "/clients/sr%20group.jpeg" },
   ];
 
   return (
@@ -23,43 +25,50 @@ export const Clientele = () => {
         </div>
 
         {/* Clients Section */}
-        <div className="mb-12">
-          <h3 className="text-2xl md:text-3xl font-display text-center text-foreground mb-3">
+        <div className="mb-16">
+          <h3 className="text-3xl md:text-4xl font-display text-center text-foreground mb-4">
             Our Valued Clients
           </h3>
-          <p className="text-center text-foreground/60 mb-10 text-sm md:text-base">
-            We have been supplying our products mainly to renowned domestic and export customers
+          <p className="text-center text-foreground/60 mb-12 text-base md:text-lg max-w-2xl mx-auto">
+            Trusted by leading brands across India for premium packaging solutions
           </p>
 
-          {/* Client Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+          {/* Client Grid - Logo Display */}
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 mb-12">
             {clients.map((client, index) => (
               <div
                 key={index}
-                className="group relative backdrop-blur-sm bg-white/60 border border-border/40 rounded-lg p-6 transition-all duration-500 hover:border-primary/40 hover:shadow-[0_8px_32px_rgba(125,82,53,0.12)] hover:-translate-y-1"
+                className="group relative backdrop-blur-sm bg-white/80 border border-border/50 rounded-xl p-8 transition-all duration-500 hover:border-primary/50 hover:shadow-[0_12px_40px_rgba(125,82,53,0.15)] hover:-translate-y-2 flex items-center justify-center min-h-[140px]"
               >
                 {/* Shine effect */}
-                <div className="absolute inset-0 rounded-lg bg-gradient-to-br from-white/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+                <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-white/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
                 
-                {/* Client name */}
-                <div className="relative flex items-center gap-3">
-                  <div className="w-2 h-2 rounded-full bg-primary flex-shrink-0"></div>
-                  <p className="font-roboto font-bold text-foreground group-hover:text-primary transition-colors duration-500 text-sm md:text-base">
-                    {client}
-                  </p>
-                </div>
+                {/* Subtle inner glow on hover */}
+                <div className="absolute inset-0 rounded-xl shadow-[inset_0_1px_2px_rgba(255,255,255,0.5)] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                
+                {/* Client logo */}
+                <img
+                  src={client.logo}
+                  alt={client.name}
+                  className="relative max-w-full max-h-24 w-auto object-contain transition-all duration-500 group-hover:scale-105"
+                  onError={(e) => {
+                    // Fallback to text if image fails to load
+                    const target = e.currentTarget;
+                    const parent = target.parentElement;
+                    if (parent) {
+                      parent.innerHTML = `<p class="font-roboto font-bold text-foreground text-sm text-center">${client.name}</p>`;
+                    }
+                  }}
+                />
               </div>
             ))}
-            
-            {/* And many more card */}
-            <div className="group relative backdrop-blur-sm bg-gradient-to-br from-primary/5 to-accent/5 border border-primary/20 rounded-lg p-6 transition-all duration-500 hover:border-primary/40 hover:shadow-[0_8px_32px_rgba(125,82,53,0.12)] hover:-translate-y-1">
-              <div className="relative flex items-center gap-3">
-                <div className="w-2 h-2 rounded-full bg-accent flex-shrink-0"></div>
-                <p className="font-roboto font-bold text-primary text-sm md:text-base">
-                  And many more…
-                </p>
-              </div>
-            </div>
+          </div>
+          
+          {/* And many more indicator */}
+          <div className="text-center mb-8">
+            <p className="text-foreground/50 font-medium text-sm tracking-wide">
+              & many more valued partners...
+            </p>
           </div>
         </div>
 
