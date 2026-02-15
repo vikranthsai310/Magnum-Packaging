@@ -7,7 +7,7 @@ export const Hero = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center px-4 py-20 overflow-hidden">
+    <section className="relative h-screen flex items-center justify-center px-4 overflow-hidden">
       {/* Premium Kokonut UI Style Glossy Navigation Bar */}
       <nav className="fixed top-0 left-0 right-0 z-50 px-4 md:px-6 py-3 md:py-4">
         <div className="max-w-7xl mx-auto">
@@ -170,9 +170,6 @@ export const Hero = () => {
           }}
         />
       </div>
-
-      {/* Spacer for full screen height */}
-      <div className="h-screen"></div>
     </section>
   );
 };
