@@ -29,14 +29,16 @@ export const Footer = () => {
 
           {/* Middle: Logo */}
           <div className="flex justify-center">
-            <img
-              src="/magnum-logo.png"
-              alt="Magnum Packaging Logo"
-              className="h-16 md:h-20 object-contain"
-              onError={(e) => {
-                e.currentTarget.style.display = 'none';
-              }}
-            />
+            <a href="/" className="cursor-pointer">
+              <img
+                src="/magnum-logo.png"
+                alt="Magnum Packaging Logo"
+                className="h-16 md:h-20 object-contain"
+                onError={(e) => {
+                  e.currentTarget.style.display = 'none';
+                }}
+              />
+            </a>
           </div>
 
           {/* Right: Gmail and WhatsApp logos */}

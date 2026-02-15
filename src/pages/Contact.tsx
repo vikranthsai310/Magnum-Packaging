@@ -83,7 +83,7 @@ const Contact = () => {
             
               <div className="relative flex items-center justify-between gap-4">
               {/* Logo - Left */}
-              <div className="flex items-center gap-2 animate-fade-in flex-shrink-0">
+              <a href="/" className="flex items-center gap-2 animate-fade-in flex-shrink-0 cursor-pointer">
                 <img
                   src="/magnum-logo.png"
                   alt="Magnum Packaging Logo"
@@ -92,7 +92,7 @@ const Contact = () => {
                     e.currentTarget.style.display = 'none';
                   }}
                 />
-              </div>
+              </a>
 
               {/* Center Navigation with Enhanced Glossy Items */}
               <div

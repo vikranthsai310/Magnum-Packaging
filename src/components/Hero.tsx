@@ -40,7 +40,7 @@ export const Hero = () => {
             
               <div className="relative flex items-center justify-center lg:justify-between gap-4">
               {/* Logo - Center on mobile, Left on desktop */}
-              <div className="flex items-center gap-2 animate-fade-in flex-shrink-0">
+              <a href="/" className="flex items-center gap-2 animate-fade-in flex-shrink-0 cursor-pointer">
                 <img
                   src="/magnum-logo.png"
                   alt="Magnum Packaging Logo"
@@ -49,7 +49,7 @@ export const Hero = () => {
                     e.currentTarget.style.display = 'none';
                   }}
                 />
-              </div>
+              </a>
 
               {/* Center Navigation with Enhanced Glossy Items */}
               <div

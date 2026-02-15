@@ -43,7 +43,7 @@ const Clientele = () => {
             
               <div className="relative flex items-center justify-between gap-4">
                 {/* Logo */}
-                <div className="flex items-center gap-2 animate-fade-in flex-shrink-0">
+                <a href="/" className="flex items-center gap-2 animate-fade-in flex-shrink-0 cursor-pointer">
                   <img
                     src="/magnum-logo.png"
                     alt="Magnum Packaging Logo"
@@ -52,7 +52,7 @@ const Clientele = () => {
                       e.currentTarget.style.display = 'none';
                     }}
                   />
-                </div>
+                </a>
 
                 {/* Navigation Links */}
                 <div className="hidden lg:flex items-center gap-1 animate-fade-in" style={{ animationDelay: "100ms" }}>

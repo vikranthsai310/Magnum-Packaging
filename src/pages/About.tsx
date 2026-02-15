@@ -41,7 +41,7 @@ const About = () => {
             
               <div className="relative flex items-center justify-between gap-4">
               {/* Logo - Left */}
-              <div className="flex items-center gap-2 animate-fade-in flex-shrink-0">
+              <a href="/" className="flex items-center gap-2 animate-fade-in flex-shrink-0 cursor-pointer">
                 <img
                   src="/magnum-logo.png"
                   alt="Magnum Packaging Logo"
@@ -50,7 +50,7 @@ const About = () => {
                     e.currentTarget.style.display = 'none';
                   }}
                 />
-              </div>
+              </a>
 
               {/* Center Navigation with Enhanced Glossy Items */}
               <div
@@ -240,11 +240,13 @@ const About = () => {
           {/* Company Overview */}
           <div className="backdrop-blur-sm bg-white/60 border border-border/40 rounded-2xl p-8 md:p-12 mb-12 shadow-[0_8px_32px_rgba(125,82,53,0.08)] hover:shadow-[0_12px_48px_rgba(125,82,53,0.12)] transition-all duration-500">
             <div className="flex items-center justify-center mb-8">
-              <img 
-                src="/magnum-logo.png" 
-                alt="Magnum Packaging LLP" 
-                className="h-20 md:h-24 w-auto object-contain"
-              />
+              <a href="/" className="cursor-pointer">
+                <img 
+                  src="/magnum-logo.png" 
+                  alt="Magnum Packaging LLP" 
+                  className="h-20 md:h-24 w-auto object-contain"
+                />
+              </a>
             </div>
 
             <div className="space-y-6 text-base md:text-lg text-foreground/75 leading-relaxed">
