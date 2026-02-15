@@ -91,7 +91,7 @@ export const Contact = () => {
                         <span>›</span>
                       </DropdownMenuItem>
                     </DropdownMenuTrigger>
-                    <DropdownMenuContent side="right" className="w-40 bg-card border-border">
+                    <DropdownMenuContent side="bottom" align="center" className="w-40 bg-card border-border">
                       <DropdownMenuItem onClick={() => handleCall(phone.number)} className="cursor-pointer gap-2 font-mono text-xs uppercase">
                         <Phone className="w-4 h-4" />
                         <span>Call</span>
