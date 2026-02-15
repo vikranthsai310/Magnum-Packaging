@@ -63,22 +63,6 @@ export const Clientele = () => {
               </div>
             ))}
           </div>
-          
-          {/* And many more indicator */}
-          <div className="text-center mb-8">
-            <p className="text-foreground/50 font-medium text-sm tracking-wide">
-              & many more valued partners...
-            </p>
-          </div>
-        </div>
-
-        {/* Closing Statement */}
-        <div className="text-center">
-          <div className="inline-block backdrop-blur-sm bg-gradient-to-r from-primary/10 via-accent/10 to-secondary/10 border border-primary/20 rounded-2xl px-8 py-6 max-w-3xl">
-            <p className="text-base md:text-lg text-foreground/80 font-medium leading-relaxed">
-              Striving to maintain <span className="text-primary font-bold">quality and customer satisfaction</span> at all costs, we are ready to serve you by meeting your requirements of corrugated boxes now!
-            </p>
-          </div>
         </div>
       </div>
     </section>

@@ -160,18 +160,6 @@ const Clientele = () => {
               </div>
             ))}
           </div>
-
-          {/* Bottom Statement */}
-          <div className="text-center">
-            <div className="inline-block backdrop-blur-sm bg-gradient-to-r from-primary/10 via-accent/10 to-secondary/10 border border-primary/30 rounded-3xl px-12 py-8 max-w-4xl">
-              <p className="text-lg md:text-xl text-foreground/80 font-medium leading-relaxed mb-4">
-                Striving to maintain <span className="text-primary font-bold">quality and customer satisfaction</span> at all costs
-              </p>
-              <p className="text-base text-foreground/60">
-                & many more valued partners across India
-              </p>
-            </div>
-          </div>
         </div>
       </section>
 
