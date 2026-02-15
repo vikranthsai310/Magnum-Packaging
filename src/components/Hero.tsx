@@ -38,8 +38,8 @@ export const Hero = () => {
               {/* Bottom subtle shadow for depth */}
               <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-primary/8 to-transparent rounded-b-full"></div>
             
-              <div className="relative flex items-center justify-between gap-4">
-              {/* Logo - Left */}
+              <div className="relative flex items-center justify-center lg:justify-between gap-4">
+              {/* Logo - Center on mobile, Left on desktop */}
               <div className="flex items-center gap-2 animate-fade-in flex-shrink-0">
                 <img
                   src="/magnum-logo.png"
@@ -106,9 +106,9 @@ export const Hero = () => {
                 </a>
               </div>
 
-              {/* Mobile Menu Button with Glossy Effect */}
+              {/* Mobile Menu Button with Glossy Effect - Positioned absolutely on mobile */}
               <button 
-                className="lg:hidden relative p-2 rounded-full transition-all duration-500 group/mobile overflow-hidden"
+                className="lg:hidden absolute right-0 p-2 rounded-full transition-all duration-500 group/mobile overflow-hidden"
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               >
                 <div className="absolute inset-0 rounded-full bg-gradient-to-br from-white/40 to-white/20 opacity-0 group-hover/mobile:opacity-100 transition-opacity duration-500"></div>
@@ -231,8 +231,20 @@ export const Hero = () => {
 
       {/* Premium Warehouse Background */}
       <div className="absolute inset-0 -z-10">
-        {/* Background Image */}
-        <div className="absolute inset-0">
+        {/* Background Image - Mobile */}
+        <div className="absolute inset-0 lg:hidden">
+          <img
+            src="/hero section mobile view.png"
+            alt="Magnum Packaging"
+            className="w-full h-full object-cover object-center"
+            onError={(e) => {
+              e.currentTarget.style.display = 'none';
+            }}
+          />
+        </div>
+
+        {/* Background Image - Desktop */}
+        <div className="absolute inset-0 hidden lg:block">
           <img
             src="/hero-warehouse.jpg"
             alt="Magnum Packaging Warehouse"
