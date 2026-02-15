@@ -1,9 +1,13 @@
 import { Button } from "@/components/ui/button";
+import { useState } from "react";
 
 export const Hero = () => {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     element?.scrollIntoView({ behavior: "smooth" });
+    setIsMobileMenuOpen(false);
   };
 
   return (
@@ -105,15 +109,16 @@ export const Hero = () => {
               {/* Mobile Menu Button with Glossy Effect */}
               <button 
                 className="lg:hidden relative p-2 rounded-full transition-all duration-500 group/mobile overflow-hidden"
-                onClick={() => {
-                  // Mobile menu toggle
-                  alert('Mobile menu - implement if needed');
-                }}
+                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               >
                 <div className="absolute inset-0 rounded-full bg-gradient-to-br from-white/40 to-white/20 opacity-0 group-hover/mobile:opacity-100 transition-opacity duration-500"></div>
                 <div className="absolute inset-0 rounded-full shadow-[inset_0_1px_2px_rgba(255,255,255,0.3)] opacity-0 group-hover/mobile:opacity-100 transition-opacity duration-500"></div>
                 <svg className="relative z-10 w-6 h-6 text-foreground group-hover/mobile:text-primary transition-colors duration-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                  {isMobileMenuOpen ? (
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  ) : (
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                  )}
                 </svg>
               </button>
 
@@ -153,6 +158,76 @@ export const Hero = () => {
           </div>
         </div>
       </nav>
+
+      {/* Mobile Menu Overlay */}
+      {isMobileMenuOpen && (
+        <div className="fixed inset-0 z-40 lg:hidden">
+          {/* Backdrop */}
+          <div 
+            className="absolute inset-0 bg-black/50 backdrop-blur-sm"
+            onClick={() => setIsMobileMenuOpen(false)}
+          ></div>
+          
+          {/* Menu Panel */}
+          <div className="absolute top-20 left-4 right-4 bg-gradient-to-br from-white/95 via-white/90 to-white/85 backdrop-blur-xl rounded-3xl shadow-2xl border border-white/50 overflow-hidden animate-fade-in">
+            <div className="p-6 space-y-2">
+              <a
+                href="#"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="block px-6 py-3 rounded-xl font-roboto text-sm font-bold uppercase tracking-wider text-foreground hover:text-primary hover:bg-primary/10 transition-all duration-300"
+              >
+                Home
+              </a>
+              <a
+                href="/about"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="block px-6 py-3 rounded-xl font-roboto text-sm font-bold uppercase tracking-wider text-foreground hover:text-primary hover:bg-primary/10 transition-all duration-300"
+              >
+                About Us
+              </a>
+              <a
+                href="#products"
+                onClick={() => scrollToSection('products')}
+                className="block px-6 py-3 rounded-xl font-roboto text-sm font-bold uppercase tracking-wider text-foreground hover:text-primary hover:bg-primary/10 transition-all duration-300"
+              >
+                Products
+              </a>
+              <a
+                href="/clientele"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="block px-6 py-3 rounded-xl font-roboto text-sm font-bold uppercase tracking-wider text-foreground hover:text-primary hover:bg-primary/10 transition-all duration-300"
+              >
+                Clientele
+              </a>
+              <a
+                href="#reach"
+                onClick={() => scrollToSection('reach')}
+                className="block px-6 py-3 rounded-xl font-roboto text-sm font-bold uppercase tracking-wider text-foreground hover:text-primary hover:bg-primary/10 transition-all duration-300"
+              >
+                Our Reach
+              </a>
+              <a
+                href="/contact"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="block px-6 py-3 rounded-xl font-roboto text-sm font-bold uppercase tracking-wider text-foreground hover:text-primary hover:bg-primary/10 transition-all duration-300"
+              >
+                Contact Us
+              </a>
+              <div className="pt-4">
+                <Button
+                  onClick={() => {
+                    window.location.href = "/contact#quote";
+                    setIsMobileMenuOpen(false);
+                  }}
+                  className="w-full btn-3d font-roboto text-sm font-bold uppercase tracking-wider rounded-full bg-gradient-to-br from-primary via-primary to-primary/90 text-white"
+                >
+                  Get Quote
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Premium Warehouse Background */}
       <div className="absolute inset-0 -z-10">

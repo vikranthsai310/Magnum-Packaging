@@ -1,10 +1,14 @@
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Target, Eye, Award } from "lucide-react";
+import { useState } from "react";
 
 const About = () => {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
   const scrollToSection = (id: string) => {
     window.location.href = `/#${id}`;
+    setIsMobileMenuOpen(false);
   };
 
   return (
@@ -106,16 +110,19 @@ const About = () => {
               {/* Mobile Menu Button with Glossy Effect */}
               <button 
                 className="lg:hidden relative p-2 rounded-full transition-all duration-500 group/mobile overflow-hidden"
-                onClick={() => {
-                  // Mobile menu toggle
-                  alert('Mobile menu - implement if needed');
-                }}
+                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               >
                 <div className="absolute inset-0 rounded-full bg-gradient-to-br from-white/40 to-white/20 opacity-0 group-hover/mobile:opacity-100 transition-opacity duration-500"></div>
                 <div className="absolute inset-0 rounded-full shadow-[inset_0_1px_2px_rgba(255,255,255,0.3)] opacity-0 group-hover/mobile:opacity-100 transition-opacity duration-500"></div>
-                <svg className="relative z-10 w-6 h-6 text-foreground group-hover/mobile:text-primary transition-colors duration-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
+                {isMobileMenuOpen ? (
+                  <svg className="relative z-10 w-6 h-6 text-foreground group-hover/mobile:text-primary transition-colors duration-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                ) : (
+                  <svg className="relative z-10 w-6 h-6 text-foreground group-hover/mobile:text-primary transition-colors duration-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                  </svg>
+                )}
               </button>
 
               {/* Premium Glossy CTA Button */}
@@ -154,6 +161,75 @@ const About = () => {
           </div>
         </div>
       </nav>
+
+      {/* Mobile Menu Overlay */}
+      {isMobileMenuOpen && (
+        <div className="fixed inset-0 z-50 lg:hidden">
+          {/* Backdrop */}
+          <div 
+            className="absolute inset-0 bg-black/60 backdrop-blur-sm"
+            onClick={() => setIsMobileMenuOpen(false)}
+          />
+          
+          {/* Menu Panel */}
+          <div className="absolute top-20 right-4 left-4 bg-gradient-to-br from-white/95 via-white/90 to-white/95 backdrop-blur-xl rounded-3xl shadow-2xl border border-white/20 p-6 animate-fade-in">
+            <div className="flex flex-col gap-4">
+              <a 
+                href="/" 
+                className="text-lg font-roboto font-bold uppercase text-foreground hover:text-primary transition-colors duration-300 py-2"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Home
+              </a>
+              <a 
+                href="/about" 
+                className="text-lg font-roboto font-bold uppercase text-primary transition-colors duration-300 py-2"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                About Us
+              </a>
+              <button 
+                onClick={() => scrollToSection('products')}
+                className="text-lg font-roboto font-bold uppercase text-foreground hover:text-primary transition-colors duration-300 py-2 text-left"
+              >
+                Products
+              </button>
+              <a 
+                href="/clientele" 
+                className="text-lg font-roboto font-bold uppercase text-foreground hover:text-primary transition-colors duration-300 py-2"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Clientele
+              </a>
+              <button 
+                onClick={() => scrollToSection('reach')}
+                className="text-lg font-roboto font-bold uppercase text-foreground hover:text-primary transition-colors duration-300 py-2 text-left"
+              >
+                Our Reach
+              </button>
+              <a 
+                href="/contact" 
+                className="text-lg font-roboto font-bold uppercase text-foreground hover:text-primary transition-colors duration-300 py-2"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Contact Us
+              </a>
+              
+              <div className="pt-4 border-t border-foreground/10">
+                <Button
+                  onClick={() => {
+                    window.location.href = "/contact#quote";
+                    setIsMobileMenuOpen(false);
+                  }}
+                  className="w-full btn-3d font-roboto text-sm font-bold uppercase tracking-wider bg-gradient-to-br from-primary via-primary to-primary/90 text-white py-3 rounded-full"
+                >
+                  Get Quote
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 px-4 overflow-hidden">
