@@ -1,4 +1,5 @@
 import { Footer } from "@/components/Footer";
+import { QuoteForm } from "@/components/QuoteForm";
 import { Button } from "@/components/ui/button";
 import { Mail, MessageCircle, Phone, MapPin } from "lucide-react";
 import {
@@ -148,7 +149,10 @@ const Contact = () => {
                   <div className="absolute -inset-1 rounded-full bg-gradient-to-r from-primary/30 via-primary/50 to-primary/30 opacity-0 group-hover/cta:opacity-100 blur-lg transition-opacity duration-700"></div>
                   
                   <Button
-                    onClick={() => scrollToSection("contact")}
+                    onClick={() => {
+                      const element = document.getElementById('quote');
+                      element?.scrollIntoView({ behavior: 'smooth' });
+                    }}
                     className="relative btn-3d font-roboto text-xs md:text-[15px] font-bold uppercase tracking-wider shadow-[0_4px_16px_0_rgba(125,82,53,0.2)] hover:shadow-[0_6px_24px_0_rgba(125,82,53,0.3)] transition-all duration-700 px-6 md:px-7 py-2.5 md:py-3 rounded-full bg-gradient-to-br from-primary via-primary to-primary/90 hover:from-primary/95 hover:via-primary hover:to-primary text-white overflow-hidden"
                   >
                     {/* Top shine */}
@@ -173,7 +177,7 @@ const Contact = () => {
       </nav>
 
       {/* Contact Section */}
-      <section className="relative pt-32 pb-20 px-4 overflow-hidden">
+      <section id="contact" className="relative pt-32 pb-20 px-4 overflow-hidden">
         <div className="absolute inset-0 grid-lines opacity-30"></div>
         
         <div className="max-w-4xl mx-auto text-center relative z-10">
@@ -238,6 +242,9 @@ const Contact = () => {
           </div>
         </div>
       </section>
+
+      {/* Quote Form */}
+      <QuoteForm />
 
       <Footer />
     </div>

@@ -1,8 +1,12 @@
 import { Button } from "@/components/ui/button";
 
 export const CallToAction = () => {
-  const scrollToContact = () => {
-    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+  const scrollToQuote = () => {
+    window.location.href = "/contact#quote";
+    setTimeout(() => {
+      const element = document.getElementById('quote');
+      element?.scrollIntoView({ behavior: 'smooth' });
+    }, 100);
   };
 
   return (
@@ -42,7 +46,7 @@ export const CallToAction = () => {
         <div className="pt-4">
           <Button
             size="lg"
-            onClick={scrollToContact}
+            onClick={scrollToQuote}
             className="btn-3d btn-spark font-mono text-sm uppercase tracking-wider"
           >
             Request a Quote

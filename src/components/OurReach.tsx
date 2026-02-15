@@ -1,6 +1,6 @@
 export const OurReach = () => {
   return (
-    <section className="py-24 px-4 relative overflow-hidden bg-muted/20">
+    <section id="reach" className="py-24 px-4 relative overflow-hidden bg-muted/20">
       {/* Background subtle pattern */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute inset-0 grid-lines opacity-5" />
