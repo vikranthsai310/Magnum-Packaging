@@ -131,7 +131,7 @@ const Clientele = () => {
                 <img
                   src={client.logo}
                   alt={client.name}
-                  className="relative max-w-full max-h-28 w-auto object-contain transition-all duration-700 group-hover:scale-110"
+                  className="relative max-w-full max-h-36 w-auto object-contain transition-all duration-700 group-hover:scale-110"
                   onError={(e) => {
                     const target = e.currentTarget;
                     const parent = target.parentElement;
@@ -146,8 +146,8 @@ const Clientele = () => {
           
           {/* And more indicator */}
           <div className="text-center mt-8">
-            <p className="text-foreground/50 font-medium text-lg tracking-wide">
-              & more
+            <p className="text-foreground/80 font-medium text-2xl tracking-wide hover:text-primary transition-colors duration-300 cursor-default">
+              & more...
             </p>
           </div>
         </div>

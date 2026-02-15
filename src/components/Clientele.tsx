@@ -43,7 +43,7 @@ export const Clientele = () => {
                 <img
                   src={client.logo}
                   alt={client.name}
-                  className="relative max-w-full max-h-24 w-auto object-contain transition-all duration-500 group-hover:scale-105"
+                  className="relative max-w-full max-h-32 w-auto object-contain transition-all duration-500 group-hover:scale-105"
                   onError={(e) => {
                     // Fallback to text if image fails to load
                     const target = e.currentTarget;
@@ -59,8 +59,8 @@ export const Clientele = () => {
           
           {/* And more indicator */}
           <div className="text-center mt-8">
-            <p className="text-foreground/50 font-medium text-base tracking-wide">
-              & more
+            <p className="text-foreground/80 font-medium text-xl tracking-wide hover:text-primary transition-colors duration-300 cursor-default">
+              & more...
             </p>
           </div>
         </div>

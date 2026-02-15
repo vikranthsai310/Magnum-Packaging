@@ -21,10 +21,9 @@ export const Footer = () => {
             <MapPin className="w-5 h-5 mt-0.5 flex-shrink-0 text-primary" />
             <address className="not-italic text-muted-foreground leading-relaxed">
               <span className="font-mono font-semibold text-foreground block mb-1 uppercase text-xs tracking-wider">Magnum Packaging LLP</span>
-              Shed no. D-13,
-               Industrial Estate- Medchal,<br />
-              Hyderabad, Telangana - 501401,<br />
-              India
+              Shed No-D13, Road no 3,<br />
+              Industrial Estate - Medchal,<br />
+              Hyderabad, Telangana-501401.
             </address>
           </div>
 
