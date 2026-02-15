@@ -76,7 +76,7 @@ export const QuoteForm = () => {
       }).join('\n\n');
 
       // Create structured email
-      const subject = `Quotation from Website`;
+      const subject = `Quote Request from Website`;
       
       const emailBody = `QUOTE REQUEST
 ═══════════════════════════════════════════════════
@@ -149,19 +149,24 @@ Date: ${new Date().toLocaleDateString('en-IN', {
   };
 
   return (
-    <section id="quote" className="py-24 px-4 bg-muted/30">
-      <div className="max-w-4xl mx-auto">
-        <Card className="card-glass shadow-soft animate-fade-in">
-          <CardHeader className="text-center">
-            <CardTitle className="font-display text-3xl md:text-4xl">
-              Get Your Quote
-            </CardTitle>
-            <CardDescription className="text-base mt-4">
-              Fill in your packaging specifications and we'll get back to you with a detailed quote.
-            </CardDescription>
-          </CardHeader>
-          
-          <CardContent>
+    <section id="quote" className="relative py-24 px-4 overflow-hidden">
+      <div className="absolute inset-0 grid-lines opacity-30"></div>
+      
+      <div className="max-w-4xl mx-auto text-center relative z-10">
+        <div className="space-y-8 animate-fade-in mb-12">
+          {/* Header */}
+          <h2 className="font-display text-4xl md:text-5xl lg:text-6xl text-foreground mb-6">
+            Get Your Quote
+          </h2>
+          <div className="w-24 h-1 bg-gradient-to-r from-primary via-accent to-secondary mx-auto rounded-full mb-8"></div>
+
+          <p className="text-lg text-foreground/70 max-w-2xl mx-auto leading-relaxed">
+            Fill in your packaging specifications and we'll get back to you with a detailed quote.
+          </p>
+        </div>
+
+        <Card className="card-glass shadow-soft animate-fade-in text-left">
+          <CardContent className="pt-6">
             <form onSubmit={handleSubmit} className="space-y-8">
               {/* Customer Details */}
               <div className="space-y-4">
@@ -171,8 +176,7 @@ Date: ${new Date().toLocaleDateString('en-IN', {
                   <Input 
                     id="company" 
                     name="company" 
-                    required 
-                    placeholder="ABC Industries Ltd."
+                    required
                   />
                 </div>
                 
@@ -182,8 +186,7 @@ Date: ${new Date().toLocaleDateString('en-IN', {
                     <Input 
                       id="name" 
                       name="name" 
-                      required 
-                      placeholder="John Doe"
+                      required
                     />
                   </div>
                   
@@ -194,7 +197,6 @@ Date: ${new Date().toLocaleDateString('en-IN', {
                       name="contact" 
                       type="tel"
                       required
-                      placeholder="+91 98765 43210"
                     />
                   </div>
                 </div>
@@ -205,8 +207,7 @@ Date: ${new Date().toLocaleDateString('en-IN', {
                     id="email" 
                     name="email" 
                     type="email" 
-                    required 
-                    placeholder="john@example.com"
+                    required
                   />
                 </div>
               </div>
@@ -254,8 +255,7 @@ Date: ${new Date().toLocaleDateString('en-IN', {
                           id={`length-${box.id}`}
                           type="number"
                           step="1"
-                          required 
-                          placeholder="300"
+                          required
                           value={box.length}
                           onChange={(e) => updateBox(box.id, 'length', e.target.value)}
                         />
@@ -267,8 +267,7 @@ Date: ${new Date().toLocaleDateString('en-IN', {
                           id={`width-${box.id}`}
                           type="number"
                           step="1"
-                          required 
-                          placeholder="250"
+                          required
                           value={box.width}
                           onChange={(e) => updateBox(box.id, 'width', e.target.value)}
                         />
@@ -280,8 +279,7 @@ Date: ${new Date().toLocaleDateString('en-IN', {
                           id={`height-${box.id}`}
                           type="number"
                           step="1"
-                          required 
-                          placeholder="200"
+                          required
                           value={box.height}
                           onChange={(e) => updateBox(box.id, 'height', e.target.value)}
                         />
@@ -292,8 +290,7 @@ Date: ${new Date().toLocaleDateString('en-IN', {
                         <Input 
                           id={`quantity-${box.id}`}
                           type="number"
-                          required 
-                          placeholder="500"
+                          required
                           value={box.quantity}
                           onChange={(e) => updateBox(box.id, 'quantity', e.target.value)}
                         />
