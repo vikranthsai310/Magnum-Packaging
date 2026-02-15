@@ -3,14 +3,14 @@ import { Button } from "@/components/ui/button";
 
 const Clientele = () => {
   const clients = [
-    { name: "DJ Group", logo: "/clients/dj%20group.jpeg" },
+    { name: "RP-Sanjiv Goenka Group", logo: "/clients/rp%20sanjiv%20goenka%20group.jpeg" },
+    { name: "Rockwell", logo: "/clients/rockwell.jpeg" },
     { name: "Future Group", logo: "/clients/future%20group.jpeg" },
     { name: "DS Group", logo: "/clients/Ds%20group.jpeg" },
-    { name: "Rockwell", logo: "/clients/rockwell.jpeg" },
-    { name: "Perfetti van Melle", logo: "/clients/perfetti.jpeg" },
-    { name: "RP-Sanjiv Goenka Group", logo: "/clients/rp%20sanjiv%20goenka%20group.jpeg" },
     { name: "Sampre Nutritions", logo: "/clients/sampre.jpeg" },
     { name: "SR Group", logo: "/clients/sr%20group.jpeg" },
+    { name: "DJ Group", logo: "/clients/dj%20group.jpeg" },
+    { name: "Perfetti van Melle", logo: "/clients/perfetti.jpeg" },
   ];
 
   return (
@@ -109,25 +109,8 @@ const Clientele = () => {
         </div>
       </nav>
 
-      {/* Hero Section */}
-      <section className="relative pt-32 pb-16 px-4 overflow-hidden">
-        <div className="absolute inset-0 grid-lines opacity-30"></div>
-        
-        <div className="max-w-6xl mx-auto text-center relative z-10">
-          <div className="space-y-6 animate-fade-in">
-            <h1 className="font-display text-5xl md:text-6xl lg:text-7xl text-foreground">
-              Our Clientele
-            </h1>
-            <div className="w-32 h-1 bg-gradient-to-r from-primary via-accent to-secondary mx-auto rounded-full"></div>
-            <p className="text-xl md:text-2xl text-foreground/70 max-w-3xl mx-auto leading-relaxed">
-              Trusted by India's leading brands for premium packaging solutions
-            </p>
-          </div>
-        </div>
-      </section>
-
       {/* Clients Grid Section */}
-      <section className="relative py-16 px-4 overflow-hidden">
+      <section className="relative py-32 px-4 overflow-hidden">
         <div className="absolute inset-0 grid-lines opacity-20"></div>
         
         <div className="max-w-7xl mx-auto relative z-10">
@@ -159,6 +142,13 @@ const Clientele = () => {
                 />
               </div>
             ))}
+          </div>
+          
+          {/* And more indicator */}
+          <div className="text-center mt-8">
+            <p className="text-foreground/50 font-medium text-lg tracking-wide">
+              & more
+            </p>
           </div>
         </div>
       </section>

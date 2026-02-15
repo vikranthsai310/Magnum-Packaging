@@ -1,13 +1,13 @@
 export const Clientele = () => {
   const clients = [
-    { name: "DJ Group", logo: "/clients/dj%20group.jpeg" },
+    { name: "RP-Sanjiv Goenka Group", logo: "/clients/rp%20sanjiv%20goenka%20group.jpeg" },
+    { name: "Rockwell", logo: "/clients/rockwell.jpeg" },
     { name: "Future Group", logo: "/clients/future%20group.jpeg" },
     { name: "DS Group", logo: "/clients/Ds%20group.jpeg" },
-    { name: "Rockwell", logo: "/clients/rockwell.jpeg" },
-    { name: "Perfetti van Melle", logo: "/clients/perfetti.jpeg" },
-    { name: "RP-Sanjiv Goenka Group", logo: "/clients/rp%20sanjiv%20goenka%20group.jpeg" },
     { name: "Sampre Nutritions", logo: "/clients/sampre.jpeg" },
     { name: "SR Group", logo: "/clients/sr%20group.jpeg" },
+    { name: "DJ Group", logo: "/clients/dj%20group.jpeg" },
+    { name: "Perfetti van Melle", logo: "/clients/perfetti.jpeg" },
   ];
 
   return (
@@ -26,13 +26,6 @@ export const Clientele = () => {
 
         {/* Clients Section */}
         <div className="mb-16">
-          <h3 className="text-3xl md:text-4xl font-display text-center text-foreground mb-4">
-            Our Valued Clients
-          </h3>
-          <p className="text-center text-foreground/60 mb-12 text-base md:text-lg max-w-2xl mx-auto">
-            Trusted by leading brands across India for premium packaging solutions
-          </p>
-
           {/* Client Grid - Logo Display */}
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 mb-12">
             {clients.map((client, index) => (
@@ -62,6 +55,13 @@ export const Clientele = () => {
                 />
               </div>
             ))}
+          </div>
+          
+          {/* And more indicator */}
+          <div className="text-center mt-8">
+            <p className="text-foreground/50 font-medium text-base tracking-wide">
+              & more
+            </p>
           </div>
         </div>
       </div>
