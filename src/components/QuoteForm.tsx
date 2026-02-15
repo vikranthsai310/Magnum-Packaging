@@ -69,16 +69,16 @@ export const QuoteForm = () => {
       // Create box specifications string
       const boxSpecifications = boxes.map((box, index) => {
         return `Box ${index + 1}:
-  Length:              ${box.length} inches
-  Width:               ${box.width} inches
-  Height:              ${box.height} inches
+  Length:              ${box.length} mm
+  Width:               ${box.width} mm
+  Height:              ${box.height} mm
   Quantity:            ${box.quantity} units`;
       }).join('\n\n');
 
       // Create structured email
-      const subject = `Quote Request - ${company} - ${totalQuantity} Units`;
+      const subject = `Quotation from Website`;
       
-      const emailBody = `QUOTE REQUEST - MAGNUM PACKAGING
+      const emailBody = `QUOTE REQUEST
 ═══════════════════════════════════════════════════
 
 COMPANY INFORMATION
@@ -223,7 +223,7 @@ Date: ${new Date().toLocaleDateString('en-IN', {
                     className="gap-2"
                   >
                     <Plus className="w-4 h-4" />
-                    Add Box
+                    Add
                   </Button>
                 </div>
                 
@@ -249,39 +249,39 @@ Date: ${new Date().toLocaleDateString('en-IN', {
                     
                     <div className="grid grid-cols-4 gap-4">
                       <div className="space-y-2">
-                        <Label htmlFor={`length-${box.id}`}>Length (in) *</Label>
+                        <Label htmlFor={`length-${box.id}`}>Length (mm) *</Label>
                         <Input 
                           id={`length-${box.id}`}
                           type="number"
-                          step="0.01"
+                          step="1"
                           required 
-                          placeholder="12"
+                          placeholder="300"
                           value={box.length}
                           onChange={(e) => updateBox(box.id, 'length', e.target.value)}
                         />
                       </div>
                       
                       <div className="space-y-2">
-                        <Label htmlFor={`width-${box.id}`}>Width (in) *</Label>
+                        <Label htmlFor={`width-${box.id}`}>Width (mm) *</Label>
                         <Input 
                           id={`width-${box.id}`}
                           type="number"
-                          step="0.01"
+                          step="1"
                           required 
-                          placeholder="10"
+                          placeholder="250"
                           value={box.width}
                           onChange={(e) => updateBox(box.id, 'width', e.target.value)}
                         />
                       </div>
                       
                       <div className="space-y-2">
-                        <Label htmlFor={`height-${box.id}`}>Height (in) *</Label>
+                        <Label htmlFor={`height-${box.id}`}>Height (mm) *</Label>
                         <Input 
                           id={`height-${box.id}`}
                           type="number"
-                          step="0.01"
+                          step="1"
                           required 
-                          placeholder="8"
+                          placeholder="200"
                           value={box.height}
                           onChange={(e) => updateBox(box.id, 'height', e.target.value)}
                         />
