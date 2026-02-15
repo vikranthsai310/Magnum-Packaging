@@ -323,8 +323,7 @@ Date: ${new Date().toLocaleDateString('en-IN', {
                     <Label htmlFor="paperBF">Paper BF</Label>
                     <Input 
                       id="paperBF" 
-                      name="paperBF" 
-                      placeholder="Optional"
+                      name="paperBF"
                     />
                   </div>
                   
@@ -332,9 +331,7 @@ Date: ${new Date().toLocaleDateString('en-IN', {
                     <Label htmlFor="paperGsm">Paper GSM</Label>
                     <Input 
                       id="paperGsm" 
-                      name="paperGsm" 
-                      type="number"
-                      placeholder="Optional"
+                      name="paperGsm"
                     />
                   </div>
                 </div>
@@ -345,7 +342,6 @@ Date: ${new Date().toLocaleDateString('en-IN', {
                     id="message" 
                     name="message" 
                     rows={3}
-                    placeholder="Any special requirements, printing, colors, etc..."
                   />
                 </div>
               </div>
