@@ -76,7 +76,7 @@ export const Contact = () => {
                   className="gap-2 btn-spark font-mono text-xs uppercase tracking-wider rounded-full"
                 >
                   <Phone className="w-5 h-5" />
-                  Contact Numbers
+                  Contact
                 </Button>
               </DropdownMenuTrigger>
               <DropdownMenuContent align="center" className="w-64 bg-card border-border">
