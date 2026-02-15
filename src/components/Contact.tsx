@@ -16,7 +16,7 @@ export const Contact = () => {
   const contactPerson = "CH SSC Ravi Theja";
   const email = "magnumpackagingllp@gmail.com";
   const website = "www.magnumpackaging.in";
-  const locationUrl = "https://maps.app.goo.gl/mCkbAmmweNMh2xdZ7";
+  const locationUrl = "https://maps.app.goo.gl/HL46wA6tjQipPXCU9";
 
   const handleWhatsApp = (phoneNumber: string) => {
     window.open(`https://wa.me/${phoneNumber}`, "_blank");
