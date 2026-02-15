@@ -11,8 +11,21 @@ const Index = () => {
     if ('scrollRestoration' in window.history) {
       window.history.scrollRestoration = 'manual';
     }
-    // Force scroll to top
-    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+    
+    // Check if there's a hash in the URL
+    const hash = window.location.hash;
+    if (hash) {
+      // Wait for the page to render, then scroll to the section
+      setTimeout(() => {
+        const element = document.querySelector(hash);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }, 100);
+    } else {
+      // Only scroll to top if there's no hash
+      window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+    }
   }, []);
 
   return (

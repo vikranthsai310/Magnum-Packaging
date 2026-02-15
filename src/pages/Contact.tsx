@@ -2,6 +2,7 @@ import { Footer } from "@/components/Footer";
 import { QuoteForm } from "@/components/QuoteForm";
 import { Button } from "@/components/ui/button";
 import { Mail, MessageCircle, Phone, MapPin } from "lucide-react";
+import { useEffect } from "react";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -10,6 +11,20 @@ import {
 } from "@/components/ui/dropdown-menu";
 
 const Contact = () => {
+  useEffect(() => {
+    // Check if there's a hash in the URL
+    const hash = window.location.hash;
+    if (hash) {
+      // Wait for the page to render, then scroll to the section
+      setTimeout(() => {
+        const element = document.querySelector(hash);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }, 100);
+    }
+  }, []);
+
   const scrollToSection = (id: string) => {
     window.location.href = `/#${id}`;
   };
@@ -262,7 +277,9 @@ const Contact = () => {
       </section>
 
       {/* Quote Form */}
-      <QuoteForm />
+      <section id="quote">
+        <QuoteForm />
+      </section>
 
       <Footer />
     </div>
