@@ -14,17 +14,20 @@ const Contact = () => {
     window.location.href = `/#${id}`;
   };
 
-  const phoneNumber = "919959674999";
-  const displayPhone = "+91 9959674999";
+  const phoneNumbers = [
+    { number: "919959674999", display: "+91 9959674999" },
+    { number: "919347694445", display: "+91 9347694445" },
+    { number: "919000974008", display: "+91 9000974008" }
+  ];
   const contactPerson = "CH SSC Ravi Theja";
   const email = "magnumpackagingllp@gmail.com";
   const locationUrl = "https://maps.app.goo.gl/mCkbAmmweNMh2xdZ7";
 
-  const handleWhatsApp = () => {
+  const handleWhatsApp = (phoneNumber: string) => {
     window.open(`https://wa.me/${phoneNumber}`, "_blank");
   };
 
-  const handleCall = () => {
+  const handleCall = (phoneNumber: string) => {
     window.location.href = `tel:${phoneNumber}`;
   };
 
@@ -213,19 +216,34 @@ const Contact = () => {
                     variant="outline"
                     className="gap-2 btn-spark font-mono text-xs uppercase tracking-wider rounded-full"
                   >
-                    <MessageCircle className="w-5 h-5" />
-                    {displayPhone}
+                    <Phone className="w-5 h-5" />
+                    Contact Numbers
                   </Button>
                 </DropdownMenuTrigger>
-                <DropdownMenuContent align="center" className="w-56 bg-card border-border">
-                  <DropdownMenuItem onClick={handleWhatsApp} className="cursor-pointer gap-2 font-mono text-xs uppercase">
-                    <MessageCircle className="w-4 h-4" />
-                    <span>WhatsApp</span>
-                  </DropdownMenuItem>
-                  <DropdownMenuItem onClick={handleCall} className="cursor-pointer gap-2 font-mono text-xs uppercase">
-                    <Phone className="w-4 h-4" />
-                    <span>Call</span>
-                  </DropdownMenuItem>
+                <DropdownMenuContent align="center" className="w-64 bg-card border-border">
+                  {phoneNumbers.map((phone, index) => (
+                    <DropdownMenu key={index}>
+                      <DropdownMenuTrigger asChild>
+                        <DropdownMenuItem className="cursor-pointer gap-2 font-mono text-xs justify-between" onSelect={(e) => e.preventDefault()}>
+                          <span className="flex items-center gap-2">
+                            <Phone className="w-4 h-4" />
+                            {phone.display}
+                          </span>
+                          <span>›</span>
+                        </DropdownMenuItem>
+                      </DropdownMenuTrigger>
+                      <DropdownMenuContent side="right" className="w-40 bg-card border-border">
+                        <DropdownMenuItem onClick={() => handleCall(phone.number)} className="cursor-pointer gap-2 font-mono text-xs uppercase">
+                          <Phone className="w-4 h-4" />
+                          <span>Call</span>
+                        </DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => handleWhatsApp(phone.number)} className="cursor-pointer gap-2 font-mono text-xs uppercase">
+                          <MessageCircle className="w-4 h-4" />
+                          <span>WhatsApp</span>
+                        </DropdownMenuItem>
+                      </DropdownMenuContent>
+                    </DropdownMenu>
+                  ))}
                 </DropdownMenuContent>
               </DropdownMenu>
 
