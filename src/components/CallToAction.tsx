@@ -5,7 +5,7 @@ export const CallToAction = () => {
     window.location.href = "/contact#quote";
     setTimeout(() => {
       const element = document.getElementById('quote');
-      element?.scrollIntoView({ behavior: 'smooth' });
+      element?.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }, 100);
   };
 

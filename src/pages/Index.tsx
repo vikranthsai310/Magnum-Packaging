@@ -19,7 +19,7 @@ const Index = () => {
       setTimeout(() => {
         const element = document.querySelector(hash);
         if (element) {
-          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          element.scrollIntoView({ behavior: 'smooth', block: 'center' });
         }
       }, 100);
     } else {

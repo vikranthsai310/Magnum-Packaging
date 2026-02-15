@@ -21,7 +21,7 @@ const Contact = () => {
       setTimeout(() => {
         const element = document.querySelector(hash);
         if (element) {
-          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          element.scrollIntoView({ behavior: 'smooth', block: 'center' });
         }
       }, 100);
     }
@@ -176,7 +176,7 @@ const Contact = () => {
                   <Button
                     onClick={() => {
                       const element = document.getElementById('quote');
-                      element?.scrollIntoView({ behavior: 'smooth' });
+                      element?.scrollIntoView({ behavior: 'smooth', block: 'center' });
                     }}
                     className="relative btn-3d font-roboto text-xs md:text-[15px] font-bold uppercase tracking-wider shadow-[0_4px_16px_0_rgba(125,82,53,0.2)] hover:shadow-[0_6px_24px_0_rgba(125,82,53,0.3)] transition-all duration-700 px-6 md:px-7 py-2.5 md:py-3 rounded-full bg-gradient-to-br from-primary via-primary to-primary/90 hover:from-primary/95 hover:via-primary hover:to-primary text-white overflow-hidden"
                   >
@@ -258,7 +258,7 @@ const Contact = () => {
                 <Button
                   onClick={() => {
                     const element = document.getElementById('quote');
-                    element?.scrollIntoView({ behavior: 'smooth' });
+                    element?.scrollIntoView({ behavior: 'smooth', block: 'center' });
                     setIsMobileMenuOpen(false);
                   }}
                   className="w-full btn-3d font-roboto text-sm font-bold uppercase tracking-wider bg-gradient-to-br from-primary via-primary to-primary/90 text-white py-3 rounded-full"
